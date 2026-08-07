@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+
+<title>Archivio — L'Antro</title>
+<meta name="description" content="L'archivio de L'Antro: tutti i film recensiti in ordine di uscita internazionale, dal più recente al più vecchio.">
+<link rel="canonical" href="https://www.lantro.example/archivio.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="L'Antro">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Archivio — L'Antro">
+<meta property="og:description" content="L'archivio de L'Antro: tutti i film recensiti in ordine di uscita internazionale, dal più recente al più vecchio.">
+<meta property="og:image" content="https://image.tmdb.org/t/p/w1280/qY7zVZ7liULhfRoXg4c9Xl83LcR.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23E50914'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23fff' text-anchor='middle'>A</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-camera" viewBox="0 0 32 24">
+    <rect x="0" y="2" width="21" height="20" rx="3" fill="currentColor"/>
+    <path d="M23 10l9-6v16l-9-6z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-close" viewBox="0 0 24 24">
+    <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 6.5V12l3.5 2.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24">
+    <path d="M4 20l1-4.5L15.5 5A2.1 2.1 0 0 1 18.5 8L8 18.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24">
+    <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24">
+    <path d="M12 20V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24">
+    <path d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header is-solid" id="header">
+  <div class="container site-header__inner">
+
+    <a class="logo" href="index.html" aria-label="L'Antro — home">
+      <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+      <span class="logo__text"><strong>L'</strong>ANTRO</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigazione principale">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#home">Home</a></li>
+        <li><a class="nav__link" href="recensioni.html">Recensioni</a></li>
+        <li><a class="nav__link is-active" href="archivio.html" aria-current="page">Archivio</a></li>
+        <li><a class="nav__link" href="registi.html">Registi</a></li>
+        <li><a class="nav__link" href="autori.html">Chi siamo</a></li>
+        <li><a class="nav__link" href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="icon-btn" id="searchToggle" type="button"
+              aria-label="Apri la ricerca" aria-expanded="false" aria-controls="searchPanel">
+        <svg width="22" height="22" aria-hidden="true"><use href="#i-search"></use></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="movies/hokum.html">Ultima recensione</a>
+      <button class="burger" id="burger" type="button"
+              aria-label="Apri il menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Pannello di ricerca -->
+  <div class="search-panel" id="searchPanel" hidden>
+    <div class="container search-panel__inner">
+      <form class="search-form" role="search" id="searchForm" action="#recensioni">
+        <svg class="search-form__icon" width="20" height="20" aria-hidden="true"><use href="#i-search"></use></svg>
+        <label class="visually-hidden" for="searchInput">Cerca una recensione</label>
+        <input class="search-form__input" id="searchInput" name="q" type="search"
+               placeholder="Cerca un film, un regista, un genere…" autocomplete="off">
+        <button class="icon-btn search-form__close" id="searchClose" type="button" aria-label="Chiudi la ricerca">
+          <svg width="20" height="20" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </form>
+      <p class="search-panel__hint" id="searchStatus" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section" id="recensioni" aria-labelledby="archivio-title">
+    <div class="container">
+
+      <div class="section__head">
+        <div>
+          <nav class="crumbs" aria-label="Percorso">
+            <a href="index.html">Home</a> <span aria-hidden="true">/</span>
+            <span aria-current="page">Archivio</span>
+          </nav>
+          <h1 class="section__title" id="archivio-title">Archivio</h1>
+          <p class="section__sub">Tutti i film recensiti, in ordine di uscita internazionale: dal più recente al più vecchio.</p>
+        </div>
+        <a class="btn btn--ghost btn--sm" href="recensioni.html">
+          Vai alle recensioni
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+
+      <p class="archive-note">
+        La data indicata è quella della prima uscita in sala nel paese di produzione, non quella italiana:
+        per la distribuzione in Italia si veda la scheda di ogni singolo film.
+      </p>
+
+      <ul class="revlist" id="revList">
+
+        <li class="revrow" data-tags="backrooms kane parsons a24 horror liminale corridoi gialli chiwetel ejiofor renate reinsve moquette youtube vancouver 2026 marta cinti">
+          <a class="revrow__link" href="movies/backrooms.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/mene1ewQ03sW3aievfnaCyEZD8t.jpg"
+                 alt="Locandina di Backrooms (Kane Parsons, 2026)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2026-05-29">29 maggio 2026</time> · uscita USA</span>
+              <h2 class="revrow__title">Backrooms: tremila metri quadri di moquette e nessuna uscita</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">Backrooms (Kane Parsons, 2026)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Marta Cinti
+                <span class="dot" aria-hidden="true"></span>
+                9 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+        <li class="revrow" data-tags="obsession curry barker horror michael johnston inde navarrette pupazzo giocattolo desiderio los angeles tiff focus features 2026 sofia ricci">
+          <a class="revrow__link" href="movies/obsession.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/KUzJSsW6pFy1Dbw7rp1PKrzvfL.jpg"
+                 alt="Locandina di Obsession (Curry Barker, 2026)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2026-05-15">15 maggio 2026</time> · uscita USA</span>
+              <h2 class="revrow__title">Obsession: il pupazzo esaudisce, ma non quello che hai chiesto</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">Obsession (Curry Barker, 2026)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Sofia Ricci
+                <span class="dot" aria-hidden="true"></span>
+                10 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+        <li class="revrow" data-tags="hokum horror damian mccarthy adam scott irlanda albergo hotel fantasmi strega folklore neon sxsw 2026 nico baldan">
+          <a class="revrow__link" href="movies/hokum.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/nhF54SQmeaMUODgRKEuMMJoTysT.jpg"
+                 alt="Locandina di Hokum (Damian McCarthy, 2026)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2026-05-01">1 maggio 2026</time> · uscita USA</span>
+              <h2 class="revrow__title">Hokum: l'albergo è aperto, la suite nuziale un po' meno</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">Hokum (Damian McCarthy, 2026)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Nico Baldan
+                <span class="dot" aria-hidden="true"></span>
+                9 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+        <li class="revrow" data-tags="weapons horror zach cregger josh brolin julia garner alden ehrenreich amy madigan zia gladys maybrook bambini scomparsi 2025 adam pryce">
+          <a class="revrow__link" href="movies/weapons.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/xoeSn325CFQLt1WC9jSBBTsvPWR.jpg"
+                 alt="Locandina di Weapons (Zach Cregger, 2025)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2025-08-08">8 agosto 2025</time> · uscita USA</span>
+              <h2 class="revrow__title">Weapons: alle 2:17 escono di casa tutti insieme</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">Weapons (Zach Cregger, 2025)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Adam Pryce
+                <span class="dot" aria-hidden="true"></span>
+                12 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+        <li class="revrow" data-tags="nosferatu robert eggers bill skarsgard lily-rose depp nicholas hoult willem dafoe murnau 1922 vampiro orlok pellicola 2024 nico baldan">
+          <a class="revrow__link" href="movies/nosferatu.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/1SftujfE9iqZpGJfnREO4IBeeqV.jpg"
+                 alt="Locandina di Nosferatu (Robert Eggers, 2024)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2024-12-25">25 dicembre 2024</time> · uscita USA</span>
+              <h2 class="revrow__title">Nosferatu: Eggers rifà Murnau e non chiede scusa a nessuno</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">Nosferatu (Robert Eggers, 2024)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Nico Baldan
+                <span class="dot" aria-hidden="true"></span>
+                12 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+        <li class="revrow" data-tags="oddity horror damian mccarthy carolyn bracken gwilym lee uomo di legno manichino irlanda cork veggente cieca gemelle 2024 sofia ricci">
+          <a class="revrow__link" href="movies/oddity.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/h7Xlgt6kSASv4HvRMjxLBXNFZwF.jpg"
+                 alt="Locandina di Oddity (Damian McCarthy, 2024)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2024-08-30">30 agosto 2024</time> · uscita Irlanda e Regno Unito</span>
+              <h2 class="revrow__title">Oddity: un uomo di legno seduto a tavola, e nessuno che lo mandi via</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">Oddity (Damian McCarthy, 2024)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Sofia Ricci
+                <span class="dot" aria-hidden="true"></span>
+                9 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+        <li class="revrow" data-tags="barbarian horror zach cregger georgina campbell bill skarsgard justin long detroit brightmoor airbnb tunnel seminterrato 2022 marta cinti">
+          <a class="revrow__link" href="movies/barbarian.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/oUcJ7FMDODJ5wKgL3g4RCoYJ68Z.jpg"
+                 alt="Locandina di Barbarian (Zach Cregger, 2022)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2022-09-09">9 settembre 2022</time> · uscita USA</span>
+              <h2 class="revrow__title">Barbarian: la casa è in affitto, il problema è sotto</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">Barbarian (Zach Cregger, 2022)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Marta Cinti
+                <span class="dot" aria-hidden="true"></span>
+                10 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+        <li class="revrow" data-tags="the lighthouse robert eggers robert pattinson willem dafoe faro bianco e nero 35mm nuova scozia gabbiano sirena 2019 elena vos">
+          <a class="revrow__link" href="movies/the-lighthouse.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/w8lnWLKBAEOT0o3GL1rpu9kZ6Q3.jpg"
+                 alt="Locandina di The Lighthouse (Robert Eggers, 2019)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2019-10-18">18 ottobre 2019</time> · uscita USA</span>
+              <h2 class="revrow__title">The Lighthouse: due uomini, uno scoglio e una lampada che non si può guardare</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">The Lighthouse (Robert Eggers, 2019)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Elena Vos
+                <span class="dot" aria-hidden="true"></span>
+                11 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+        <li class="revrow" data-tags="midsommar il villaggio dei dannati folk horror ari aster florence pugh svezia harga fiori 2019 elena vos">
+          <a class="revrow__link" href="movies/midsommar.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/rzgPP3PCFou1VP4EE4fZ9jEd1J1.jpg"
+                 alt="Locandina di Midsommar – Il villaggio dei dannati (Ari Aster, 2019)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2019-07-03">3 luglio 2019</time> · uscita USA</span>
+              <h2 class="revrow__title">Midsommar: il sole non tramonta e non puoi nemmeno chiudere gli occhi</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">Midsommar – Il villaggio dei dannati (Ari Aster, 2019)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Elena Vos
+                <span class="dot" aria-hidden="true"></span>
+                12 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+        <li class="revrow" data-tags="noi us horror jordan peele lupita nyong'o doppi tethered forbici conigli 2019 adam pryce">
+          <a class="revrow__link" href="movies/noi.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/BvX9YE1X4mR0WeXb9hqJAiBNmM.jpg"
+                 alt="Locandina di Noi (Jordan Peele, 2019)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2019-03-22">22 marzo 2019</time> · uscita USA</span>
+              <h2 class="revrow__title">Noi: quattro persone ferme sul vialetto, e nessuna se ne va</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">Noi (Jordan Peele, 2019)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Adam Pryce
+                <span class="dot" aria-hidden="true"></span>
+                10 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+        <li class="revrow" data-tags="hereditary le radici del male horror ari aster toni collette alex wolff lutto plastico 2018 marta cinti">
+          <a class="revrow__link" href="movies/hereditary.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/rNL0qZZCgeeYAPamh69r7BSYQnh.jpg"
+                 alt="Locandina di Hereditary – Le radici del male (Ari Aster, 2018)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2018-06-08">8 giugno 2018</time> · uscita USA</span>
+              <h2 class="revrow__title">Hereditary: la casa è un plastico, e noi ci abitiamo dentro</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">Hereditary – Le radici del male (Ari Aster, 2018)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Marta Cinti
+                <span class="dot" aria-hidden="true"></span>
+                11 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+        <li class="revrow" data-tags="scappa get out horror jordan peele daniel kaluuya sunken place ipnosi tazzina 2017 nico baldan">
+          <a class="revrow__link" href="movies/get-out.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/4TWW63EGgaWiTVulMTpAKR151Ne.jpg"
+                 alt="Locandina di Scappa – Get Out (Jordan Peele, 2017)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2017-02-24">24 febbraio 2017</time> · uscita USA</span>
+              <h2 class="revrow__title">Scappa – Get Out: la cosa più spaventosa è la gentilezza</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">Scappa – Get Out (Jordan Peele, 2017)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Nico Baldan
+                <span class="dot" aria-hidden="true"></span>
+                9 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+        <li class="revrow" data-tags="the vvitch the witch folk horror robert eggers anya taylor-joy streghe 2015 elena vos">
+          <a class="revrow__link" href="movies/the-vvitch.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/cJpvTuOl4OV8TgDib4ilYqPVAfe.jpg"
+                 alt="Locandina di The VVitch (Robert Eggers, 2015)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2016-02-19">19 febbraio 2016</time> · uscita USA</span>
+              <h2 class="revrow__title">The VVitch: dieci anni dopo, il bosco è ancora là</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">The VVitch (Robert Eggers, 2015)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Elena Vos
+                <span class="dot" aria-hidden="true"></span>
+                10 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+        <li class="revrow" data-tags="it follows horror david robert mitchell maika monroe disasterpeace detroit 2014 adam pryce">
+          <a class="revrow__link" href="movies/it-follows.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/86LuLSw5gUfKyGxAA32FKhEiqIv.jpg"
+                 alt="Locandina di It Follows (David Robert Mitchell, 2014)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2015-03-13">13 marzo 2015</time> · uscita USA</span>
+              <h2 class="revrow__title">It Follows: cammina, non corre, e non si stanca mai</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">It Follows (David Robert Mitchell, 2014)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Adam Pryce
+                <span class="dot" aria-hidden="true"></span>
+                8 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+        <li class="revrow" data-tags="the babadook horror jennifer kent essie davis lutto australia 2014 sofia ricci">
+          <a class="revrow__link" href="movies/babadook.html">
+            <img class="revrow__poster" src="https://image.tmdb.org/t/p/w300/7jkDAK1axdu5QPkISlehOyEVw37.jpg"
+                 alt="Locandina di The Babadook (Jennifer Kent, 2014)" width="300" height="450" loading="lazy" decoding="async">
+            <div>
+              <span class="revrow__release"><time datetime="2014-05-22">22 maggio 2014</time> · uscita Australia</span>
+              <h2 class="revrow__title">The Babadook: il mostro vive in cantina, il lutto pure</h2>
+              <p class="revrow__meta">
+                <span class="revrow__film">The Babadook (Jennifer Kent, 2014)</span>
+                <span class="dot" aria-hidden="true"></span>
+                Sofia Ricci
+                <span class="dot" aria-hidden="true"></span>
+                9 min
+              </p>
+            </div>
+            <svg class="revrow__go" width="20" height="20" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+
+      </ul>
+
+      <p class="no-results" id="noResults" hidden>Nessuna recensione corrisponde alla tua ricerca.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+
+    <div>
+      <a class="logo" href="index.html" aria-label="L'Antro — home">
+        <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+        <span class="logo__text"><strong>L'</strong>ANTRO</span>
+      </a>
+      <p class="site-footer__about">
+        Recensioni di cinema scritte, senza fretta.
+        Un posto buio dove si parla di film per esteso.
+      </p>
+    </div>
+
+    <nav aria-labelledby="f-nav-1">
+      <h2 class="site-footer__title" id="f-nav-1">Esplora</h2>
+      <ul class="site-footer__list">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="recensioni.html">Recensioni</a></li>
+        <li><a href="archivio.html">Archivio</a></li>
+        <li><a href="registi.html">Registi</a></li>
+        <li><a href="autori.html">Chi siamo</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© <span id="year">2026</span> L'Antro. Tutti i diritti riservati.</p>
+  </div>
+  <div class="container">
+    <aside class="ai-notice" aria-label="Avviso sull'origine dei contenuti">
+      <strong>Attenzione:</strong> questo sito è interamente generato con l'AI a soli scopi accademici e senza fini di lucro.
+    </aside>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Torna in cima" hidden>
+  <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Archivio — L'Antro",
+  "description": "Tutti i film recensiti in ordine di uscita internazionale.",
+  "inLanguage": "it-IT",
+  "url": "https://www.lantro.example/archivio.html",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://www.lantro.example/#blog"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "numberOfItems": 15,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Backrooms",
+        "url": "https://www.lantro.example/movies/backrooms.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Obsession",
+        "url": "https://www.lantro.example/movies/obsession.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Hokum",
+        "url": "https://www.lantro.example/movies/hokum.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Weapons",
+        "url": "https://www.lantro.example/movies/weapons.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Nosferatu",
+        "url": "https://www.lantro.example/movies/nosferatu.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Oddity",
+        "url": "https://www.lantro.example/movies/oddity.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "name": "Barbarian",
+        "url": "https://www.lantro.example/movies/barbarian.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "name": "The Lighthouse",
+        "url": "https://www.lantro.example/movies/the-lighthouse.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "name": "Midsommar",
+        "url": "https://www.lantro.example/movies/midsommar.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "name": "Noi",
+        "url": "https://www.lantro.example/movies/noi.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "name": "Hereditary",
+        "url": "https://www.lantro.example/movies/hereditary.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "name": "Scappa – Get Out",
+        "url": "https://www.lantro.example/movies/get-out.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "name": "The VVitch",
+        "url": "https://www.lantro.example/movies/the-vvitch.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "name": "It Follows",
+        "url": "https://www.lantro.example/movies/it-follows.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "name": "The Babadook",
+        "url": "https://www.lantro.example/movies/babadook.html"
+      }
+    ]
+  }
+}
+</script>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

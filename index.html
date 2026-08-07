@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+
+<title>L'Antro — Recensioni di cinema</title>
+<meta name="description" content="L'Antro: recensioni di cinema scritte, senza fretta e senza spoiler. Un film alla volta, raccontato per esteso.">
+<link rel="canonical" href="https://www.lantro.example/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="L'Antro">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="L'Antro — Recensioni di cinema">
+<meta property="og:description" content="L'Antro: recensioni di cinema scritte, senza fretta e senza spoiler. Un film alla volta, raccontato per esteso.">
+<meta property="og:image" content="https://image.tmdb.org/t/p/w1280/qY7zVZ7liULhfRoXg4c9Xl83LcR.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23E50914'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23fff' text-anchor='middle'>A</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-camera" viewBox="0 0 32 24">
+    <rect x="0" y="2" width="21" height="20" rx="3" fill="currentColor"/>
+    <path d="M23 10l9-6v16l-9-6z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-close" viewBox="0 0 24 24">
+    <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 6.5V12l3.5 2.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24">
+    <path d="M4 20l1-4.5L15.5 5A2.1 2.1 0 0 1 18.5 8L8 18.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24">
+    <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24">
+    <path d="M12 20V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24">
+    <path d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
+  <div class="container site-header__inner">
+
+    <a class="logo" href="#home" aria-label="L'Antro — home">
+      <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+      <span class="logo__text"><strong>L'</strong>ANTRO</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigazione principale">
+      <ul class="nav__list">
+        <li><a class="nav__link is-active" href="#home" aria-current="page">Home</a></li>
+        <li><a class="nav__link" href="recensioni.html">Recensioni</a></li>
+        <li><a class="nav__link" href="archivio.html">Archivio</a></li>
+        <li><a class="nav__link" href="registi.html">Registi</a></li>
+        <li><a class="nav__link" href="autori.html">Chi siamo</a></li>
+        <li><a class="nav__link" href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="icon-btn" id="searchToggle" type="button"
+              aria-label="Apri la ricerca" aria-expanded="false" aria-controls="searchPanel">
+        <svg width="22" height="22" aria-hidden="true"><use href="#i-search"></use></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="movies/hokum.html">Ultima recensione</a>
+      <button class="burger" id="burger" type="button"
+              aria-label="Apri il menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Pannello di ricerca -->
+  <div class="search-panel" id="searchPanel" hidden>
+    <div class="container search-panel__inner">
+      <form class="search-form" role="search" id="searchForm" action="#recensioni">
+        <svg class="search-form__icon" width="20" height="20" aria-hidden="true"><use href="#i-search"></use></svg>
+        <label class="visually-hidden" for="searchInput">Cerca una recensione</label>
+        <input class="search-form__input" id="searchInput" name="q" type="search"
+               placeholder="Cerca un film, un regista, un genere…" autocomplete="off">
+        <button class="icon-btn search-form__close" id="searchClose" type="button" aria-label="Chiudi la ricerca">
+          <svg width="20" height="20" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </form>
+      <p class="search-panel__hint" id="searchStatus" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HOME: ULTIMA RECENSIONE ============ -->
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <picture class="hero__bg">
+      <img src="https://image.tmdb.org/t/p/original/qY7zVZ7liULhfRoXg4c9Xl83LcR.jpg"
+           alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+    </picture>
+
+    <div class="container hero__inner">
+     <div class="hero__col">
+      <p class="hero__eyebrow">Ultima recensione</p>
+
+      <h1 class="hero__title" id="hero-title">
+        Hokum: l'albergo è aperto,<br>la suite nuziale un po' meno
+      </h1>
+
+      <p class="hero__meta">
+        <span class="meta-item">
+          <svg class="ico-red" width="18" height="18" aria-hidden="true"><use href="#i-pen"></use></svg>
+          Nico Baldan
+        </span>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="meta-item">
+          <svg class="ico-red" width="18" height="18" aria-hidden="true"><use href="#i-clock"></use></svg>
+          9 min di lettura
+        </span>
+        <span class="dot" aria-hidden="true"></span>
+        <time datetime="2026-08-07">7 agosto 2026</time>
+      </p>
+
+      <p class="hero__text">
+        Damian McCarthy arriva al terzo film con dieci volte il budget dei precedenti, un attore
+        americano famoso e la stessa contea di Cork di sempre. Il timore era che il salto gli togliesse
+        le mani. Non gliele ha tolte.
+      </p>
+
+      <p class="hero__actions">
+        <a class="btn btn--primary btn--lg" href="movies/hokum.html">
+          Leggi la recensione
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+        <a class="btn btn--ghost btn--lg" href="recensioni.html">Tutte le recensioni</a>
+      </p>
+     </div>
+
+     <figure class="hero__poster">
+       <a href="movies/hokum.html" aria-label="Leggi la recensione di Hokum">
+         <img src="https://image.tmdb.org/t/p/w500/nhF54SQmeaMUODgRKEuMMJoTysT.jpg"
+              alt="Locandina ufficiale di Hokum (2026)"
+              width="500" height="750" fetchpriority="high" decoding="async">
+       </a>
+       <figcaption>Locandina ufficiale</figcaption>
+     </figure>
+    </div>
+  </section>
+
+  <!-- ============ RECENSIONI ============ -->
+  <section class="section" id="recensioni" aria-labelledby="recensioni-title">
+    <div class="container">
+
+      <div class="section__head">
+        <div>
+          <h2 class="section__title" id="recensioni-title">Recensioni</h2>
+          <p class="section__sub">Un film alla volta, raccontato per esteso. Qui le ultime tre pubblicate.</p>
+        </div>
+        <a class="btn btn--primary btn--sm" href="recensioni.html">
+          Tutte le recensioni
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+
+      <div class="grid" id="reviewGrid">
+
+        <article class="card" data-tags="hokum horror damian mccarthy adam scott irlanda albergo hotel fantasmi strega folklore neon sxsw 2026 nico baldan">
+          <a class="card__media" href="movies/hokum.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/zQcj9CaPFrxhJE30AIn8XqDM4yK.jpg" alt=""
+                 width="780" height="439" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-08-07">7 agosto 2026</time> · Nico Baldan</p>
+          <h3 class="card__title"><a href="movies/hokum.html">Hokum: l'albergo è aperto, la suite nuziale un po' meno</a></h3>
+          <p class="card__excerpt">Uno scrittore, un'urna da svuotare e un albergo irlandese che ha un solo difetto: risponde. Damian McCarthy passa al budget grosso senza perdere le mani.</p>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            9 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di Damian McCarthy
+          </p>
+        </article>
+
+        <article class="card" data-tags="the vvitch the witch folk horror robert eggers anya taylor-joy streghe 2015 elena vos">
+          <a class="card__media" href="movies/the-vvitch.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/34dAw3ai6acNF0mK1zgmNz3wXTI.jpg" alt=""
+                 width="800" height="450" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-08-05">5 agosto 2026</time> · Elena Vos</p>
+          <h3 class="card__title"><a href="movies/the-vvitch.html">The VVitch: dieci anni dopo, il bosco è ancora là</a></h3>
+          <p class="card__excerpt">Una famiglia puritana, un caprone nero e la cosa più radicale vista in un esordio: credere davvero alle streghe.</p>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            10 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di Robert Eggers
+          </p>
+        </article>
+
+        <article class="card" data-tags="it follows horror david robert mitchell maika monroe disasterpeace detroit 2014 adam pryce">
+          <a class="card__media" href="movies/it-follows.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/keEWjA5ykLJo851tIBFdmkxPxxh.jpg" alt=""
+                 width="800" height="450" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-07-29">29 luglio 2026</time> · Adam Pryce</p>
+          <h3 class="card__title"><a href="movies/it-follows.html">It Follows: cammina, non corre, e non si stanca mai</a></h3>
+          <p class="card__excerpt">Con <em>They Follow</em> in lavorazione, torniamo al film che ha insegnato a tutti a controllare il fondo dell'inquadratura.</p>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            8 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di David Robert Mitchell
+          </p>
+        </article>
+
+      </div>
+
+      <p class="no-results" id="noResults" hidden>Nessuna recensione corrisponde alla tua ricerca.</p>
+    </div>
+  </section>
+
+  <!-- ============ REGISTI ============ -->
+  <section class="section section--alt" id="registi" aria-labelledby="registi-title">
+    <div class="container">
+
+      <div class="section__head">
+        <div>
+          <h2 class="section__title" id="registi-title">Registi</h2>
+          <p class="section__sub">Chi ha firmato i film di cui abbiamo scritto. Qui gli ultimi tre.</p>
+        </div>
+        <a class="btn btn--primary btn--sm" href="registi.html">
+          Tutti i Registi
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+
+      <div class="grid grid--dirs">
+
+        <article class="dir" data-tags="damian mccarthy regista regia horror irlanda cork caveat oddity hokum ghost story folklore">
+          <img class="dir__photo" src="https://image.tmdb.org/t/p/w300/mCY9Q0rJcmbj165O3qOutFMOEoH.jpg"
+               alt="Ritratto di Damian McCarthy" width="300" height="450" loading="lazy" decoding="async">
+          <div class="dir__body">
+            <p class="dir__kicker">Ghost story, Horror</p>
+            <h3 class="dir__name">Damian McCarthy</h3>
+            <p class="dir__bio">
+              Irlandese, di Bantry, contea di Cork, arrivato al lungometraggio dopo quindici anni di
+              cortometraggi girati con niente. Gira quasi sempre nella stessa zona e spesso negli stessi
+              muri, compra gli oggetti di scena nei mercatini e ha una fiducia quasi antiquata nel
+              principio che una cosa ferma, inquadrata abbastanza a lungo, faccia più paura di una cosa
+              che si muove.
+            </p>
+            <p class="dir__link">
+              <a href="movies/hokum.html">
+                Hokum
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+              <a href="movies/oddity.html">
+                Oddity
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="dir" data-tags="robert eggers regista regia folk horror the vvitch the witch the lighthouse nosferatu periodo">
+          <img class="dir__photo" src="https://image.tmdb.org/t/p/w300/v9ukVIUGT1vQ3KuPVLSua7FfS9s.jpg"
+               alt="Ritratto di Robert Eggers" width="300" height="450" loading="lazy" decoding="async">
+          <div class="dir__body">
+            <p class="dir__kicker">Folk horror, Periodo</p>
+            <h3 class="dir__name">Robert Eggers</h3>
+            <p class="dir__bio">
+              Viene dalla scenografia teatrale e si vede in ogni chiodo inquadrato. Ricostruisce il
+              passato dagli archivi e ci gira dentro l'orrore, senza mai concedere allo spettatore
+              la scorciatoia della metafora. Tre film in dieci anni, tutti fotografati da Jarin Blaschke,
+              tutti girati in pellicola.
+            </p>
+            <p class="dir__link">
+              <a href="movies/the-vvitch.html">
+                The VVitch
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+              <a href="movies/the-lighthouse.html">
+                The Lighthouse
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+              <a href="movies/nosferatu.html">
+                Nosferatu
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="dir" data-tags="david robert mitchell regista regia horror it follows they follow detroit">
+          <img class="dir__photo" src="https://image.tmdb.org/t/p/w300/i0XKqclsHNO8JAD7yNuuUNOUXG3.jpg"
+               alt="Ritratto di David Robert Mitchell" width="300" height="450" loading="lazy" decoding="async">
+          <div class="dir__body">
+            <p class="dir__kicker">Horror, Mystery</p>
+            <h3 class="dir__name">David Robert Mitchell</h3>
+            <p class="dir__bio">
+              Michigan, pochi film e nessuna fretta. Gira l'adolescenza come un territorio già finito
+              e usa il fondo dell'inquadratura meglio di chiunque altro nel genere.
+            </p>
+            <p class="dir__link">
+              <a href="movies/it-follows.html">
+                It Follows
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="no-results" id="noDirs" hidden>Nessun regista corrisponde alla tua ricerca.</p>
+    </div>
+  </section>
+
+  <!-- ============ CHI SIAMO ============ -->
+  <section class="section" id="chi-siamo" aria-labelledby="chi-siamo-title">
+    <div class="container">
+
+      <div class="section__head">
+        <div>
+          <h2 class="section__title" id="chi-siamo-title">Chi siamo</h2>
+          <p class="section__sub">Cinque persone che non dormono bene e ne scrivono. Qui le ultime tre firme.</p>
+        </div>
+        <a class="btn btn--primary btn--sm" href="autori.html">
+          Tutti gli Autori
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+
+      <p class="crew-intro">
+        L'Antro non ha una redazione: ha un gruppo di spettatori accaniti che si scambiano film,
+        si accusano a vicenda di non aver capito il finale e ogni tanto pubblicano qualcosa.
+        Nessuno di noi è un critico professionista. Alcuni di noi non sono più nemmeno del tutto sereni.
+      </p>
+
+      <div class="grid grid--crew" id="crewGrid">
+
+        <article class="crew" data-tags="nico baldan vermiglio recensore redazione pellicola anni settanta giallo italiano proiezionista murnau nosferatu">
+          <span class="crew__avatar" aria-hidden="true">NB</span>
+          <div>
+            <p class="crew__kicker">Pellicola · Anni Settanta</p>
+            <h3 class="crew__name">Nico Baldan</h3>
+            <p class="crew__handle">detto «Vermiglio», per via del maglione</p>
+            <p class="crew__bio">
+              Guarda soltanto film proiettati in pellicola e considera lo streaming «una seduta spiritica
+              mal riuscita». Entra in sala con un quaderno e ne esce con lo stesso quaderno, però bagnato,
+              e non ha mai voluto spiegare perché. Giura che il proiezionista del cinema sotto casa non
+              invecchia dal 1998 e ha aperto un fascicolo sulla questione. Il fascicolo è alla pagina 340.
+            </p>
+          </div>
+          <p class="crew__tag"><strong>Ultima recensione:</strong> <a href="movies/hokum.html">Hokum</a></p>
+        </article>
+
+        <article class="crew" data-tags="elena vos recensore redazione folk horror the vvitch the lighthouse caprone bosco fondatrice">
+          <span class="crew__avatar" aria-hidden="true">EV</span>
+          <div>
+            <p class="crew__kicker">Fondatrice · Folk horror</p>
+            <h3 class="crew__name">Elena Vos</h3>
+            <p class="crew__handle">«se non succede niente per un'ora, è il mio film»</p>
+            <p class="crew__bio">
+              Ha aperto L'Antro nel salotto di casa, dopo la quattordicesima visione di <em>The VVitch</em>.
+              Sostiene di aver imparato l'inglese del Seicento «per necessità professionale» e tiene sulla
+              scrivania un caprone di ceramica a cui sottopone ogni pezzo prima della pubblicazione: se il
+              caprone non risponde, l'articolo esce. Finora il caprone non ha mai risposto.
+              Dorme con la luce accesa dal 2016 e dà la colpa al lavoro.
+            </p>
+          </div>
+          <p class="crew__tag"><strong>Ultima recensione:</strong> <a href="movies/the-vvitch.html">The VVitch</a></p>
+        </article>
+
+        <article class="crew" data-tags="adam pryce recensore redazione it follows horror piscina slasher inseguimenti weapons">
+          <span class="crew__avatar" aria-hidden="true">AP</span>
+          <div>
+            <p class="crew__kicker">Horror lento · Inseguimenti</p>
+            <h3 class="crew__name">Adam Pryce</h3>
+            <p class="crew__handle">«controllate sempre il fondo dell'inquadratura»</p>
+            <p class="crew__bio">
+              Ex istruttore di nuoto in una piscina comunale. Ha dato le dimissioni tre giorni dopo aver
+              visto <em>It Follows</em> e non ha mai chiarito del tutto la vicenda. Cammina rasente ai muri
+              «per rigore metodologico» e si è imposto una regola ferrea: nessuna recensione dopo
+              mezzanotte, perché a mezzanotte le recensioni cominciano a rispondergli. Cammina sempre.
+              Non corre mai. Dice che tanto non serve.
+            </p>
+          </div>
+          <p class="crew__tag"><strong>Ultima recensione:</strong> <a href="movies/it-follows.html">It Follows</a></p>
+        </article>
+
+      </div>
+
+      <p class="no-results" id="noCrew" hidden>Nessun recensore corrisponde alla tua ricerca.</p>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="section section--alt" id="gallery" aria-labelledby="gallery-title">
+    <div class="container">
+
+      <div class="section__head">
+        <div>
+          <h2 class="section__title" id="gallery-title">Gallery</h2>
+          <p class="section__sub">I fotogrammi che ci sono rimasti addosso. Qui gli ultimi tre.</p>
+        </div>
+        <a class="btn btn--primary btn--sm" href="gallery.html">
+          Tutte le Immagini
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+
+      <ul class="gallery gallery--preview" id="galleryGrid">
+
+        <li class="shot" data-tags="hokum albergo hotel notte irlanda damian mccarthy adam scott 2026">
+          <button class="shot__btn js-zoom" type="button"
+                  data-full="https://image.tmdb.org/t/p/original/n7WeIugzFXXkkCO6ps3GClKvn7V.jpg"
+                  data-caption="Hokum — l'albergo di notte, e una finestra accesa più in basso di tutte le altre">
+            <img src="https://image.tmdb.org/t/p/w780/n7WeIugzFXXkkCO6ps3GClKvn7V.jpg" alt="Hokum — l'albergo di notte, e una finestra accesa più in basso di tutte le altre"
+                 width="700" height="700" loading="lazy" decoding="async">
+            <span class="shot__zoom" aria-hidden="true"><svg width="20" height="20"><use href="#i-expand"></use></svg></span>
+            <span class="shot__cap">Hokum — l'albergo di notte, e una finestra accesa più in basso di tutte le altre</span>
+          </button>
+        </li>
+
+        <li class="shot" data-tags="the vvitch the witch bosco radura robert eggers folk horror 2015">
+          <button class="shot__btn js-zoom" type="button"
+                  data-full="https://image.tmdb.org/t/p/original/uesCOl85N6pqph7EdjV9Yj9eBgs.jpg"
+                  data-caption="The VVitch — la radura, prima che il mais marcisca">
+            <img src="https://image.tmdb.org/t/p/w780/uesCOl85N6pqph7EdjV9Yj9eBgs.jpg" alt="The VVitch — la radura, prima che il mais marcisca"
+                 width="700" height="700" loading="lazy" decoding="async">
+            <span class="shot__zoom" aria-hidden="true"><svg width="20" height="20"><use href="#i-expand"></use></svg></span>
+            <span class="shot__cap">The VVitch — la radura, prima che il mais marcisca</span>
+          </button>
+        </li>
+
+        <li class="shot" data-tags="it follows piscina david robert mitchell horror 2014">
+          <button class="shot__btn js-zoom" type="button"
+                  data-full="https://image.tmdb.org/t/p/original/oj8bJUBtxs12C6iNqKMoJO8x7Kb.jpg"
+                  data-caption="It Follows — la piscina, l'ultimo piano">
+            <img src="https://image.tmdb.org/t/p/w780/oj8bJUBtxs12C6iNqKMoJO8x7Kb.jpg" alt="It Follows — la piscina, l'ultimo piano"
+                 width="700" height="700" loading="lazy" decoding="async">
+            <span class="shot__zoom" aria-hidden="true"><svg width="20" height="20"><use href="#i-expand"></use></svg></span>
+            <span class="shot__cap">It Follows — la piscina, l'ultimo piano</span>
+          </button>
+        </li>
+
+      </ul>
+
+      <p class="no-results" id="noShots" hidden>Nessuna immagine corrisponde alla tua ricerca.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+
+    <div>
+      <a class="logo" href="index.html" aria-label="L'Antro — home">
+        <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+        <span class="logo__text"><strong>L'</strong>ANTRO</span>
+      </a>
+      <p class="site-footer__about">
+        Recensioni di cinema scritte, senza fretta.
+        Un posto buio dove si parla di film per esteso.
+      </p>
+    </div>
+
+    <nav aria-labelledby="f-nav-1">
+      <h2 class="site-footer__title" id="f-nav-1">Esplora</h2>
+      <ul class="site-footer__list">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="recensioni.html">Recensioni</a></li>
+        <li><a href="archivio.html">Archivio</a></li>
+        <li><a href="registi.html">Registi</a></li>
+        <li><a href="autori.html">Chi siamo</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© <span id="year">2026</span> L'Antro. Tutti i diritti riservati.</p>
+  </div>
+  <div class="container">
+    <aside class="ai-notice" aria-label="Avviso sull'origine dei contenuti">
+      <strong>Attenzione:</strong> questo sito è interamente generato con l'AI a soli scopi accademici e senza fini di lucro.
+    </aside>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Torna in cima" hidden>
+  <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+
+<!-- ============ LIGHTBOX GALLERY ============ -->
+<div class="modal" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__dialog" role="document">
+    <div class="modal__bar">
+      <h2 class="modal__title" id="lightboxTitle">Immagine</h2>
+      <button class="icon-btn" id="lightboxClose" type="button" aria-label="Chiudi l'immagine" data-close>
+        <svg width="22" height="22" aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <figure class="modal__figure" id="lightboxFigure"></figure>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.lantro.example/#website",
+      "name": "L'Antro",
+      "alternateName": "L'Antro — Recensioni di cinema",
+      "url": "https://www.lantro.example/",
+      "inLanguage": "it-IT",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.lantro.example/recensioni.html?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://www.lantro.example/#blog",
+      "name": "L'Antro",
+      "description": "Recensioni di cinema scritte, senza fretta e senza spoiler.",
+      "inLanguage": "it-IT",
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Hokum: l'albergo è aperto, la suite nuziale un po' meno",
+          "datePublished": "2026-08-07",
+          "author": {
+            "@type": "Person",
+            "name": "Nico Baldan"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/zQcj9CaPFrxhJE30AIn8XqDM4yK.jpg",
+          "url": "https://www.lantro.example/movies/hokum.html",
+          "about": {
+            "@type": "Movie",
+            "name": "Hokum",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "Damian McCarthy"
+            }
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "The VVitch: dieci anni dopo, il bosco è ancora là",
+          "datePublished": "2026-08-05",
+          "author": {
+            "@type": "Person",
+            "name": "Elena Vos"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/34dAw3ai6acNF0mK1zgmNz3wXTI.jpg",
+          "url": "https://www.lantro.example/movies/the-vvitch.html",
+          "about": {
+            "@type": "Movie",
+            "name": "The VVitch",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "Robert Eggers"
+            }
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "It Follows: cammina, non corre, e non si stanca mai",
+          "datePublished": "2026-07-29",
+          "author": {
+            "@type": "Person",
+            "name": "Adam Pryce"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/keEWjA5ykLJo851tIBFdmkxPxxh.jpg",
+          "url": "https://www.lantro.example/movies/it-follows.html",
+          "about": {
+            "@type": "Movie",
+            "name": "It Follows",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "David Robert Mitchell"
+            }
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "The Babadook: il mostro vive in cantina, il lutto pure",
+          "datePublished": "2026-07-22",
+          "author": {
+            "@type": "Person",
+            "name": "Sofia Ricci"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/AeZYS1KwWVlAHmTdMbIyw4qUoY.jpg",
+          "url": "https://www.lantro.example/movies/babadook.html",
+          "about": {
+            "@type": "Movie",
+            "name": "The Babadook",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "Jennifer Kent"
+            }
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Hereditary: la casa è un plastico, e noi ci abitiamo dentro",
+          "datePublished": "2026-07-15",
+          "author": {
+            "@type": "Person",
+            "name": "Marta Cinti"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/ihYsYfAZ41ZaOWVY4DqddLOg46u.jpg",
+          "url": "https://www.lantro.example/movies/hereditary.html",
+          "about": {
+            "@type": "Movie",
+            "name": "Hereditary",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "Ari Aster"
+            }
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Midsommar: il sole non tramonta e non puoi nemmeno chiudere gli occhi",
+          "datePublished": "2026-07-08",
+          "author": {
+            "@type": "Person",
+            "name": "Elena Vos"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/8xlq21ppNksi2qkH9zYg6go1pDt.jpg",
+          "url": "https://www.lantro.example/movies/midsommar.html",
+          "about": {
+            "@type": "Movie",
+            "name": "Midsommar",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "Ari Aster"
+            }
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Scappa – Get Out: la cosa più spaventosa è la gentilezza",
+          "datePublished": "2026-07-01",
+          "author": {
+            "@type": "Person",
+            "name": "Nico Baldan"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/vZ7EVk7FaNEWYqlVWbFLHP8Z0LU.jpg",
+          "url": "https://www.lantro.example/movies/get-out.html",
+          "about": {
+            "@type": "Movie",
+            "name": "Scappa – Get Out",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "Jordan Peele"
+            }
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Noi: quattro persone ferme sul vialetto, e nessuna se ne va",
+          "datePublished": "2026-06-24",
+          "author": {
+            "@type": "Person",
+            "name": "Adam Pryce"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/jNUCddkM1fjYcFIcEwFjc7s2H4V.jpg",
+          "url": "https://www.lantro.example/movies/noi.html",
+          "about": {
+            "@type": "Movie",
+            "name": "Noi",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "Jordan Peele"
+            }
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Barbarian: la casa è in affitto, il problema è sotto",
+          "datePublished": "2026-06-17",
+          "author": {
+            "@type": "Person",
+            "name": "Marta Cinti"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/dtB2vYSDCmbbqgjqt5sK0TEeAKc.jpg",
+          "url": "https://www.lantro.example/movies/barbarian.html",
+          "about": {
+            "@type": "Movie",
+            "name": "Barbarian",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "Zach Cregger"
+            }
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Weapons: alle 2:17 escono di casa tutti insieme",
+          "datePublished": "2026-06-10",
+          "author": {
+            "@type": "Person",
+            "name": "Adam Pryce"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/8ASH1sGCR6Bwuw9BdNl7X7QzS30.jpg",
+          "url": "https://www.lantro.example/movies/weapons.html",
+          "about": {
+            "@type": "Movie",
+            "name": "Weapons",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "Zach Cregger"
+            }
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Oddity: un uomo di legno seduto a tavola, e nessuno che lo mandi via",
+          "datePublished": "2026-05-27",
+          "author": {
+            "@type": "Person",
+            "name": "Sofia Ricci"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/b2eV2XVYTMXfY1rxvwo1wfNWnmX.jpg",
+          "url": "https://www.lantro.example/movies/oddity.html",
+          "about": {
+            "@type": "Movie",
+            "name": "Oddity",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "Damian McCarthy"
+            }
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Obsession: il pupazzo esaudisce, ma non quello che hai chiesto",
+          "datePublished": "2026-05-20",
+          "author": {
+            "@type": "Person",
+            "name": "Sofia Ricci"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/diOZbaDnB2CIilwd0527AB1qMvW.jpg",
+          "url": "https://www.lantro.example/movies/obsession.html",
+          "about": {
+            "@type": "Movie",
+            "name": "Obsession",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "Curry Barker"
+            }
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Backrooms: tremila metri quadri di moquette e nessuna uscita",
+          "datePublished": "2026-05-13",
+          "author": {
+            "@type": "Person",
+            "name": "Marta Cinti"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/mCpwRayjXMFzKHbjbzc5JRKfq1O.jpg",
+          "url": "https://www.lantro.example/movies/backrooms.html",
+          "about": {
+            "@type": "Movie",
+            "name": "Backrooms",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "Kane Parsons"
+            }
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "The Lighthouse: due uomini, uno scoglio e una lampada che non si può guardare",
+          "datePublished": "2026-05-06",
+          "author": {
+            "@type": "Person",
+            "name": "Elena Vos"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/r4uBaF8VCdIcEp38jUpdxKP8eLJ.jpg",
+          "url": "https://www.lantro.example/movies/the-lighthouse.html",
+          "about": {
+            "@type": "Movie",
+            "name": "The Lighthouse",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "Robert Eggers"
+            }
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Nosferatu: Eggers rifà Murnau e non chiede scusa a nessuno",
+          "datePublished": "2026-04-29",
+          "author": {
+            "@type": "Person",
+            "name": "Nico Baldan"
+          },
+          "image": "https://image.tmdb.org/t/p/w780/2gAStVyyv9C3BSEKhP0a1aM3Qy9.jpg",
+          "url": "https://www.lantro.example/movies/nosferatu.html",
+          "about": {
+            "@type": "Movie",
+            "name": "Nosferatu",
+            "genre": "Horror",
+            "director": {
+              "@type": "Person",
+              "name": "Robert Eggers"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Registi",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Person",
+            "name": "Damian McCarthy",
+            "jobTitle": "Regista"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Person",
+            "name": "Robert Eggers",
+            "jobTitle": "Regista"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Person",
+            "name": "David Robert Mitchell",
+            "jobTitle": "Regista"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Person",
+            "name": "Jennifer Kent",
+            "jobTitle": "Regista"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Person",
+            "name": "Ari Aster",
+            "jobTitle": "Regista"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Person",
+            "name": "Jordan Peele",
+            "jobTitle": "Regista"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Person",
+            "name": "Zach Cregger",
+            "jobTitle": "Regista"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Person",
+            "name": "Curry Barker",
+            "jobTitle": "Regista"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "Person",
+            "name": "Kane Parsons",
+            "jobTitle": "Regista"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

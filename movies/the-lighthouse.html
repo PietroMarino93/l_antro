@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+
+<title>The Lighthouse: due uomini, uno scoglio e una lampada che non si può guardare — L'Antro</title>
+<meta name="description" content="Recensione di The Lighthouse (2019) di Robert Eggers: Pattinson e Dafoe su uno scoglio del New England, in bianco e nero, girato in 35mm nel formato quasi quadrato 1,19:1.">
+<link rel="canonical" href="https://www.lantro.example/movies/the-lighthouse.html">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="L'Antro">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="The Lighthouse: due uomini, uno scoglio e una lampada che non si può guardare">
+<meta property="og:description" content="Robert Eggers, 2019: Pattinson, Dafoe, uno scoglio e un formato quasi quadrato.">
+<meta property="og:image" content="https://image.tmdb.org/t/p/w1280/sYLzRuEcwSz0L1Z92wQNrETHU9O.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23E50914'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23fff' text-anchor='middle'>A</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-camera" viewBox="0 0 32 24">
+    <rect x="0" y="2" width="21" height="20" rx="3" fill="currentColor"/>
+    <path d="M23 10l9-6v16l-9-6z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-close" viewBox="0 0 24 24">
+    <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 6.5V12l3.5 2.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24">
+    <path d="M4 20l1-4.5L15.5 5A2.1 2.1 0 0 1 18.5 8L8 18.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24">
+    <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24">
+    <path d="M12 20V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24">
+    <path d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header is-solid" id="header">
+  <div class="container site-header__inner">
+
+    <a class="logo" href="../index.html" aria-label="L'Antro — home">
+      <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+      <span class="logo__text"><strong>L'</strong>ANTRO</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigazione principale">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#home">Home</a></li>
+        <li><a class="nav__link is-active" href="../recensioni.html" aria-current="page">Recensioni</a></li>
+        <li><a class="nav__link" href="../archivio.html">Archivio</a></li>
+        <li><a class="nav__link" href="../registi.html">Registi</a></li>
+        <li><a class="nav__link" href="../autori.html">Chi siamo</a></li>
+        <li><a class="nav__link" href="../gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="icon-btn" id="searchToggle" type="button"
+              aria-label="Apri la ricerca" aria-expanded="false" aria-controls="searchPanel">
+        <svg width="22" height="22" aria-hidden="true"><use href="#i-search"></use></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="../recensioni.html">Tutte le recensioni</a>
+      <button class="burger" id="burger" type="button"
+              aria-label="Apri il menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel" id="searchPanel" hidden>
+    <div class="container search-panel__inner">
+      <form class="search-form" role="search" id="searchForm" method="get" action="../index.html">
+        <svg class="search-form__icon" width="20" height="20" aria-hidden="true"><use href="#i-search"></use></svg>
+        <label class="visually-hidden" for="searchInput">Cerca una recensione</label>
+        <input class="search-form__input" id="searchInput" name="q" type="search"
+               placeholder="Cerca un film, un regista, un genere…" autocomplete="off">
+        <button class="icon-btn search-form__close" id="searchClose" type="button" aria-label="Chiudi la ricerca">
+          <svg width="20" height="20" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </form>
+      <p class="search-panel__hint" id="searchStatus" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</header>
+
+<div class="read-progress" id="readProgress" aria-hidden="true"><span></span></div>
+
+<main id="main">
+<article class="article">
+
+  <!-- ---------- Testata ---------- -->
+  <header class="article__head">
+    <div class="container article__head-inner">
+      <nav class="crumbs" aria-label="Percorso">
+        <a href="../index.html">Home</a> <span aria-hidden="true">/</span>
+        <a href="../recensioni.html">Recensioni</a> <span aria-hidden="true">/</span>
+        <span aria-current="page">The Lighthouse</span>
+      </nav>
+
+      <p class="badge badge--static">Bianco e nero</p>
+
+      <h1 class="article__title">The Lighthouse: due uomini, uno scoglio e una lampada che non si può guardare</h1>
+
+      <p class="article__standfirst">
+        Dopo <em>The VVitch</em>, Robert Eggers aveva davanti la strada spianata e ha scelto di girare un film di due ore in bianco e nero, quasi quadrato, con due attori, uno scoglio e nessuna possibilità di uscita. È il suo film più libero, e forse il migliore.
+      </p>
+
+      <p class="article__meta">
+        <span class="meta-item">
+          <svg class="ico-red" width="18" height="18" aria-hidden="true"><use href="#i-pen"></use></svg>
+          di <strong>Elena Vos</strong>
+        </span>
+        <span class="dot" aria-hidden="true"></span>
+        <time datetime="2026-05-06">6 maggio 2026</time>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="meta-item">
+          <svg class="ico-red" width="18" height="18" aria-hidden="true"><use href="#i-clock"></use></svg>
+          11 min di lettura
+        </span>
+      </p>
+    </div>
+  </header>
+
+  <figure class="article__hero article__hero--poster">
+    <div class="poster-stage"
+         style="--stage-bg:url('https://image.tmdb.org/t/p/w1280/sYLzRuEcwSz0L1Z92wQNrETHU9O.jpg')">
+      <img src="https://image.tmdb.org/t/p/w500/w8lnWLKBAEOT0o3GL1rpu9kZ6Q3.jpg"
+           alt="Locandina ufficiale di The Lighthouse (Robert Eggers, 2019)"
+           width="500" height="750" fetchpriority="high" decoding="async">
+    </div>
+    <figcaption>Locandina ufficiale — The Lighthouse (Robert Eggers, 2019).</figcaption>
+  </figure>
+
+  <!-- ---------- Corpo ---------- -->
+  <div class="container article__layout">
+
+    <div class="article__body">
+
+      <p>
+        Due uomini scendono da una barca su uno scoglio del New England, negli anni Novanta
+        dell'Ottocento. Uno è vecchio, zoppo, parla come un romanzo di Melville letto ad alta voce da un
+        ubriaco. L'altro è giovane, taciturno, ha delle mani da chi ha lavorato nei boschi e una storia
+        alle spalle che non racconta. Il turno dura quattro settimane. Il vecchio si tiene la lampada e
+        non gliela fa nemmeno guardare. Il giovane spala carbone, svuota i bugliuoli, ridipinge, e
+        aspetta la fine del mese. La barca del cambio non arriverà.
+      </p>
+
+      <p>
+        Nel 2019 avevo appena aperto L'Antro e passavo le giornate a spiegare a chiunque passasse per il
+        mio salotto perché <em>The VVitch</em> fosse una cosa seria. Quando è uscito <em>The Lighthouse</em>
+        mi sono trovata nella posizione scomoda di dover ammettere che il secondo film era, se possibile,
+        ancora meno disposto a venirmi incontro. Undici anni e mezzo dopo il primo, sette dopo il secondo,
+        posso dire con una certa calma quello che allora non sapevo formulare: <em>The Lighthouse</em> è
+        il punto in cui Eggers smette di ricostruire il passato e comincia a usarlo.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/r4uBaF8VCdIcEp38jUpdxKP8eLJ.jpg"
+             alt="I due guardiani si avvicinano di spalle alla casa del faro nella nebbia" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>L'arrivo. Da qui in avanti l'unica cosa che cambia, nell'inquadratura, è quanto sono sporchi.</figcaption>
+      </figure>
+
+      <h2>Il formato è il film</h2>
+
+      <p>
+        Jarin Blaschke gira in 35 millimetri, bianco e nero, con obiettivi Baltar degli anni Trenta e
+        filtri costruiti apposta da Schneider Kreuznach per tagliare tutto tranne il blu e l'ultravioletto:
+        serve a imitare la resa della pellicola ortocromatica del primo Novecento, quella per cui il cielo
+        viene bianco e le facce vengono a pezzi. Il rapporto d'immagine è 1,19:1, cioè quasi un quadrato,
+        e non si usava praticamente più dal passaggio al sonoro.
+      </p>
+
+      <p>
+        Non è un vezzo, ed è la cosa che vorrei che si capisse. Un quadro alto e stretto fa due cose
+        contemporaneamente: fa stare bene il faro, che è verticale, e fa stare male i due uomini, che nel
+        campo e controcampo si trovano sempre schiacciati contro i bordi. Quando sono nella stessa
+        inquadratura non c'è spazio per nessuno dei due. Quando sono soli, sopra la testa gli resta
+        mezzo metro di niente. Ho visto pochi film in cui la scelta tecnica coincide così esattamente
+        con quello che il film racconta.
+      </p>
+
+      <blockquote class="pullquote">
+        <p>Il formato non lascia posto a due persone nella stessa inquadratura. Questo è tutto il film.</p>
+      </blockquote>
+
+      <p>
+        La sceneggiatura, scritta con il fratello Max Eggers, è montata su documenti veri: diari di
+        guardiani, manuali del servizio fari, il gergo marinaro del New England, e sotto tutto la lingua
+        di Melville. Dafoe recita monologhi lunghi trenta righe con una sintassi che nel 2019 nessuno
+        avrebbe azzardato, e la maledizione che scaglia contro Pattinson a metà film — a proposito di una
+        cena che non è piaciuta — è uno dei pezzi di bravura recitativa del decennio, perché è insieme
+        terrificante e ridicolo, e il film non ci dice mai quale delle due cose dobbiamo scegliere.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/bM9Dn5Fx89YeYJVbM59xnpgTm8p.jpg"
+             alt="I due guardiani a pochi centimetri di distanza, faccia a faccia" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>Willem Dafoe e Robert Pattinson: nessuno dei due chiede simpatia, e il film non gliela concede.</figcaption>
+      </figure>
+
+      <h2>Che film è, poi</h2>
+
+      <p>
+        Qui bisogna essere onesti: <em>The Lighthouse</em> non ha una trama nel senso in cui la
+        intendono le persone normali. Ha una situazione, un logoramento e un finale mitologico. Le
+        letture disponibili sono tutte lì, in bella vista, e Eggers non sceglie: Prometeo che ruba il
+        fuoco e viene sbranato, Proteo, la sirena, il gabbiano che non si uccide, la colpa di Thomas
+        Howard che si fa chiamare con il nome di un altro. C'è chi ha trovato l'accumulo furbo. A me
+        sembra invece l'unica soluzione possibile per un film che parla di uomini soli che si raccontano
+        storie: le storie sono tante, si contraddicono, e nessuna spiega perché sono lì.
+      </p>
+
+      <p>
+        Poi c'è la parte comica, che nel 2019 mise in difficoltà una parte della critica e che oggi è
+        evidente. Metà del film è una commedia sui rapporti di lavoro: chi pulisce, chi decide, chi
+        mangia per primo, chi sta di sopra. Il vecchio è un capo insopportabile e il giovane è un
+        dipendente che si sta preparando a fare una scenata. Che questo, per accumulo, diventi una
+        discesa negli inferi non toglie niente al fatto che per lunghi tratti si rida, e che le risate
+        siano parte del disegno. Il rutto, la ballata, il ballo: sono lì apposta.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/zwANAv7KQ3Lv7H6Tf7R1GI345iA.jpg"
+             alt="Primo piano di un volto annerito e stravolto in bianco e nero" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>Nella seconda ora la fotografia comincia a mangiarsi le facce. È voluto: la pellicola ortocromatica fa esattamente questo.</figcaption>
+      </figure>
+
+      <h2>Undici anni dopo</h2>
+
+      <p>
+        Il film è passato alla Quinzaine di Cannes nel maggio del 2019, si è preso il premio FIPRESCI,
+        e in autunno la A24 lo ha fatto uscire in poche sale prima di allargare. Ha incassato diciotto
+        milioni di dollari su undici di budget: non un flop, non un fenomeno. Una candidatura all'Oscar
+        per la fotografia, persa. In Italia in sala non è mai arrivato, ed è finito direttamente in
+        digitale nel maggio del 2020, cioè nel momento peggiore possibile per un film costruito su un
+        formato che nessuno schermo di casa rispetta.
+      </p>
+
+      <p>
+        È il motivo per cui ne scrivo adesso e non allora. <em>The Lighthouse</em> è un film che chiede
+        una sala, un buio vero e un impianto che regga la sirena da nebbia di Mark Korven — che non è
+        musica, è una nota tenuta che entra e non se ne va più. Fuori da quelle condizioni resta un bel
+        film. Dentro, è la cosa più vicina a un incubo controllato che il cinema recente abbia prodotto.
+      </p>
+
+      <p>
+        Ho un'ultima cosa da dire e riguarda il finale, che non racconterò. Il caprone di
+        <a href="the-vvitch.html">The VVitch</a> mi tiene compagnia sulla scrivania da dieci anni e non
+        ha mai risposto a niente. La lampada del faro, invece, risponde. È solo che quello che dice non è
+        rivolto a noi, e Eggers ha il coraggio di tenerci fuori dalla stanza fino all'ultimo secondo.
+      </p>
+
+      <p class="article__signature">— E. V.</p>
+    </div>
+
+    <!-- ---------- Colonna laterale ---------- -->
+    <aside class="article__aside">
+
+      <div class="filmcard">
+        <h2 class="filmcard__title">La scheda</h2>
+        <dl class="filmcard__list">
+          <dt>Titolo</dt><dd>The Lighthouse</dd>
+          <dt>Regia</dt><dd>Robert Eggers</dd>
+          <dt>Anno</dt><dd>2019</dd>
+          <dt>Durata</dt><dd><time datetime="PT109M">109 min</time></dd>
+          <dt>Genere</dt><dd>Drammatico, Horror, Fantastico</dd>
+          <dt>Paese</dt><dd>USA, Canada</dd>
+          <dt>Cast</dt><dd>Robert Pattinson, Willem Dafoe, Valeriia Karaman</dd>
+          <dt>Sceneggiatura</dt><dd>Robert Eggers, Max Eggers</dd>
+          <dt>Musiche</dt><dd>Mark Korven</dd>
+          <dt>Fotografia</dt><dd>Jarin Blaschke — 35mm b/n, 1,19:1</dd>
+          <dt>Montaggio</dt><dd>Louise Ford</dd>
+          <dt>Costumi</dt><dd>Linda Muir</dd>
+          <dt>Anteprima</dt><dd>Cannes, Quinzaine, 19 maggio 2019</dd>
+          <dt>In Italia</dt><dd>mai in sala, dal 19 maggio 2020 in digitale</dd>
+        </dl>
+      </div>
+
+      <div class="authorcard">
+        <span class="authorcard__avatar" aria-hidden="true">EV</span>
+        <div>
+          <p class="authorcard__name">Elena Vos</p>
+          <p class="authorcard__bio">
+            Fondatrice de L'Antro. Predilige il folk horror e i film in cui non succede quasi niente.
+            <a href="../autori.html">Chi siamo</a>
+          </p>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ---------- Correlate ---------- -->
+  <section class="section" aria-labelledby="related-title">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title" id="related-title">Continua a leggere</h2>
+          <p class="section__sub">Altre recensioni dall'archivio.</p>
+        </div>
+        <a class="btn btn--ghost btn--sm" href="../recensioni.html">
+          Tutte le recensioni
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+
+      <div class="grid">
+
+        <article class="card">
+          <a class="card__media" href="nosferatu.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/2gAStVyyv9C3BSEKhP0a1aM3Qy9.jpg" alt=""
+                 width="780" height="439" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-04-29">29 aprile 2026</time> · Nico Baldan</p>
+          <h3 class="card__title"><a href="nosferatu.html">Nosferatu: Eggers rifà Murnau e non chiede scusa a nessuno</a></h3>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            12 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di Robert Eggers
+          </p>
+        </article>
+
+        <article class="card">
+          <a class="card__media" href="the-vvitch.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/34dAw3ai6acNF0mK1zgmNz3wXTI.jpg" alt=""
+                 width="800" height="450" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-08-05">5 agosto 2026</time> · Elena Vos</p>
+          <h3 class="card__title"><a href="the-vvitch.html">The VVitch: dieci anni dopo, il bosco è ancora là</a></h3>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            10 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di Robert Eggers
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <a class="logo" href="../index.html" aria-label="L'Antro — home">
+        <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+        <span class="logo__text"><strong>L'</strong>ANTRO</span>
+      </a>
+      <p class="site-footer__about">
+        Recensioni di cinema scritte, senza fretta.
+        Un posto buio dove si parla di film per esteso.
+      </p>
+    </div>
+    <nav aria-labelledby="f-nav-1">
+      <h2 class="site-footer__title" id="f-nav-1">Esplora</h2>
+      <ul class="site-footer__list">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../recensioni.html">Recensioni</a></li>
+        <li><a href="../archivio.html">Archivio</a></li>
+        <li><a href="../registi.html">Registi</a></li>
+        <li><a href="../autori.html">Chi siamo</a></li>
+        <li><a href="../gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© <span id="year">2026</span> L'Antro. Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Torna in cima" hidden>
+  <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Lighthouse: due uomini, uno scoglio e una lampada che non si può guardare",
+  "description": "Recensione di The Lighthouse (2019) di Robert Eggers.",
+  "inLanguage": "it-IT",
+  "datePublished": "2026-05-06",
+  "dateModified": "2026-05-06",
+  "timeRequired": "PT11M",
+  "image": "https://image.tmdb.org/t/p/w1280/sYLzRuEcwSz0L1Z92wQNrETHU9O.jpg",
+  "author": { "@type": "Person", "name": "Elena Vos" },
+  "publisher": { "@type": "Organization", "name": "L'Antro" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.lantro.example/movies/the-lighthouse.html" },
+  "isPartOf": { "@type": "Blog", "@id": "https://www.lantro.example/#blog" },
+  "about": {
+    "@type": "Movie",
+    "name": "The Lighthouse",
+    "genre": ["Drama", "Horror", "Fantasy"],
+    "duration": "PT109M",
+    "dateCreated": "2019",
+    "countryOfOrigin": "US",
+    "director": { "@type": "Person", "name": "Robert Eggers" },
+    "musicBy": { "@type": "Person", "name": "Mark Korven" },
+    "actor": [
+      { "@type": "Person", "name": "Robert Pattinson" },
+      { "@type": "Person", "name": "Willem Dafoe" }
+    ]
+  }
+}
+</script>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

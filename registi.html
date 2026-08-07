@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+
+<title>Registi — L'Antro</title>
+<meta name="description" content="Tutti i registi dei film recensiti su L'Antro.">
+<link rel="canonical" href="https://www.lantro.example/registi.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="L'Antro">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Registi — L'Antro">
+<meta property="og:description" content="Tutti i registi dei film recensiti su L'Antro.">
+<meta property="og:image" content="https://image.tmdb.org/t/p/w1280/qY7zVZ7liULhfRoXg4c9Xl83LcR.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23E50914'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23fff' text-anchor='middle'>A</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-camera" viewBox="0 0 32 24">
+    <rect x="0" y="2" width="21" height="20" rx="3" fill="currentColor"/>
+    <path d="M23 10l9-6v16l-9-6z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-close" viewBox="0 0 24 24">
+    <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 6.5V12l3.5 2.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24">
+    <path d="M4 20l1-4.5L15.5 5A2.1 2.1 0 0 1 18.5 8L8 18.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24">
+    <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24">
+    <path d="M12 20V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24">
+    <path d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header is-solid" id="header">
+  <div class="container site-header__inner">
+
+    <a class="logo" href="index.html" aria-label="L'Antro — home">
+      <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+      <span class="logo__text"><strong>L'</strong>ANTRO</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigazione principale">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#home">Home</a></li>
+        <li><a class="nav__link" href="recensioni.html">Recensioni</a></li>
+        <li><a class="nav__link" href="archivio.html">Archivio</a></li>
+        <li><a class="nav__link is-active" href="registi.html" aria-current="page">Registi</a></li>
+        <li><a class="nav__link" href="autori.html">Chi siamo</a></li>
+        <li><a class="nav__link" href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="icon-btn" id="searchToggle" type="button"
+              aria-label="Apri la ricerca" aria-expanded="false" aria-controls="searchPanel">
+        <svg width="22" height="22" aria-hidden="true"><use href="#i-search"></use></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="movies/hokum.html">Ultima recensione</a>
+      <button class="burger" id="burger" type="button"
+              aria-label="Apri il menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Pannello di ricerca -->
+  <div class="search-panel" id="searchPanel" hidden>
+    <div class="container search-panel__inner">
+      <form class="search-form" role="search" id="searchForm" action="#registi">
+        <svg class="search-form__icon" width="20" height="20" aria-hidden="true"><use href="#i-search"></use></svg>
+        <label class="visually-hidden" for="searchInput">Cerca una recensione</label>
+        <input class="search-form__input" id="searchInput" name="q" type="search"
+               placeholder="Cerca un film, un regista, un genere…" autocomplete="off">
+        <button class="icon-btn search-form__close" id="searchClose" type="button" aria-label="Chiudi la ricerca">
+          <svg width="20" height="20" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </form>
+      <p class="search-panel__hint" id="searchStatus" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section" id="registi" aria-labelledby="registi-title">
+    <div class="container">
+
+      <div class="section__head">
+        <div>
+          <nav class="crumbs" aria-label="Percorso">
+            <a href="index.html">Home</a> <span aria-hidden="true">/</span>
+            <span aria-current="page">Registi</span>
+          </nav>
+          <h1 class="section__title" id="registi-title">Registi</h1>
+          <p class="section__sub">Tutti i registi dei film di cui abbiamo scritto.</p>
+        </div>
+        <a class="btn btn--ghost btn--sm" href="recensioni.html">
+          Vai alle recensioni
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+
+      <div class="grid grid--dirs">
+
+        <article class="dir" data-tags="damian mccarthy regista regia horror irlanda cork caveat oddity hokum ghost story folklore">
+          <img class="dir__photo" src="https://image.tmdb.org/t/p/w300/mCY9Q0rJcmbj165O3qOutFMOEoH.jpg"
+               alt="Ritratto di Damian McCarthy" width="300" height="450" loading="lazy" decoding="async">
+          <div class="dir__body">
+            <p class="dir__kicker">Ghost story, Horror</p>
+            <h3 class="dir__name">Damian McCarthy</h3>
+            <p class="dir__bio">
+              Irlandese, di Bantry, contea di Cork, arrivato al lungometraggio dopo quindici anni di
+              cortometraggi girati con niente. Gira quasi sempre nella stessa zona e spesso negli stessi
+              muri, compra gli oggetti di scena nei mercatini e ha una fiducia quasi antiquata nel
+              principio che una cosa ferma, inquadrata abbastanza a lungo, faccia più paura di una cosa
+              che si muove.
+            </p>
+            <p class="dir__link">
+              <a href="movies/hokum.html">
+                Hokum
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+              <a href="movies/oddity.html">
+                Oddity
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="dir" data-tags="robert eggers regista regia folk horror the vvitch the witch the lighthouse nosferatu periodo">
+          <img class="dir__photo" src="https://image.tmdb.org/t/p/w300/v9ukVIUGT1vQ3KuPVLSua7FfS9s.jpg"
+               alt="Ritratto di Robert Eggers" width="300" height="450" loading="lazy" decoding="async">
+          <div class="dir__body">
+            <p class="dir__kicker">Folk horror, Periodo</p>
+            <h3 class="dir__name">Robert Eggers</h3>
+            <p class="dir__bio">
+              Viene dalla scenografia teatrale e si vede in ogni chiodo inquadrato. Ricostruisce il
+              passato dagli archivi e ci gira dentro l'orrore, senza mai concedere allo spettatore
+              la scorciatoia della metafora. Tre film in dieci anni, tutti fotografati da Jarin Blaschke,
+              tutti girati in pellicola.
+            </p>
+            <p class="dir__link">
+              <a href="movies/the-vvitch.html">
+                The VVitch
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+              <a href="movies/the-lighthouse.html">
+                The Lighthouse
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+              <a href="movies/nosferatu.html">
+                Nosferatu
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="dir" data-tags="david robert mitchell regista regia horror it follows they follow detroit">
+          <img class="dir__photo" src="https://image.tmdb.org/t/p/w300/i0XKqclsHNO8JAD7yNuuUNOUXG3.jpg"
+               alt="Ritratto di David Robert Mitchell" width="300" height="450" loading="lazy" decoding="async">
+          <div class="dir__body">
+            <p class="dir__kicker">Horror, Mystery</p>
+            <h3 class="dir__name">David Robert Mitchell</h3>
+            <p class="dir__bio">
+              Michigan, pochi film e nessuna fretta. Gira l'adolescenza come un territorio già finito
+              e usa il fondo dell'inquadratura meglio di chiunque altro nel genere.
+            </p>
+            <p class="dir__link">
+              <a href="movies/it-follows.html">
+                It Follows
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="dir" data-tags="jennifer kent regista regia horror the babadook australia the nightingale">
+          <img class="dir__photo" src="https://image.tmdb.org/t/p/w300/neV1Pc9Ed051WmQ4jahjEHuIbRg.jpg"
+               alt="Ritratto di Jennifer Kent" width="300" height="450" loading="lazy" decoding="async">
+          <div class="dir__body">
+            <p class="dir__kicker">Horror, Drammatico</p>
+            <h3 class="dir__name">Jennifer Kent</h3>
+            <p class="dir__bio">
+              Australiana, ex attrice, ha imparato il mestiere osservando il set di <em>Dogville</em>.
+              Fa film scomodi sul dolore delle donne e non ha mai chiesto scusa per nessuno di essi.
+            </p>
+            <p class="dir__link">
+              <a href="movies/babadook.html">
+                The Babadook
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="dir" data-tags="ari aster regista regia horror hereditary midsommar beau ha paura a24">
+          <img class="dir__photo" src="https://image.tmdb.org/t/p/w300/45lOHyHwdMgyKm6u3jwLtyfwOjc.jpg"
+               alt="Ritratto di Ari Aster" width="300" height="450" loading="lazy" decoding="async">
+          <div class="dir__body">
+            <p class="dir__kicker">Horror, Drammatico</p>
+            <h3 class="dir__name">Ari Aster</h3>
+            <p class="dir__bio">
+              Due esordi in due anni e un'idea sola, tenuta con ostinazione: la famiglia è un rito che
+              qualcun altro ha scritto prima di te. Compone come un miniaturista e monta come uno che
+              non ha nessuna intenzione di lasciarti scendere.
+            </p>
+            <p class="dir__link">
+              <a href="movies/hereditary.html">
+                Hereditary
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+              <a href="movies/midsommar.html">
+                Midsommar
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="dir" data-tags="jordan peele regista regia horror scappa get out noi us nope satira sociale">
+          <img class="dir__photo" src="https://image.tmdb.org/t/p/w300/kFUKn5g3ebpyZ3CSZZZo2HFWRNQ.jpg"
+               alt="Ritratto di Jordan Peele" width="300" height="450" loading="lazy" decoding="async">
+          <div class="dir__body">
+            <p class="dir__kicker">Horror, Thriller</p>
+            <h3 class="dir__name">Jordan Peele</h3>
+            <p class="dir__bio">
+              Viene dalla comicità televisiva e si vede nel tempismo, mai nel tono. Costruisce
+              meccanismi popolari che funzionano al primo colpo e cambiano forma al secondo, e ha
+              riportato la satira sociale dentro l'horror senza chiedere il permesso a nessuno.
+            </p>
+            <p class="dir__link">
+              <a href="movies/get-out.html">
+                Get Out
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+              <a href="movies/noi.html">
+                Noi
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="dir" data-tags="zach cregger regista regia horror barbarian weapons the whitest kids u know commedia detroit maybrook">
+          <img class="dir__photo" src="https://image.tmdb.org/t/p/w300/bpFGFfWYIrZVK7WjwkVLwIoMKEb.jpg"
+               alt="Ritratto di Zach Cregger" width="300" height="450" loading="lazy" decoding="async">
+          <div class="dir__body">
+            <p class="dir__kicker">Horror, Mystery</p>
+            <h3 class="dir__name">Zach Cregger</h3>
+            <p class="dir__bio">
+              Ha passato dieci anni a fare sketch comici con i Whitest Kids U' Know e poi si è messo a
+              scrivere horror, portandosi dietro l'unica cosa che serviva davvero: il senso esatto del
+              momento in cui una situazione smette di essere quella che sembrava. Costruisce i film a
+              blocchi, come una scaletta di gag, e ogni blocco toglie allo spettatore un'informazione
+              che credeva di avere.
+            </p>
+            <p class="dir__link">
+              <a href="movies/barbarian.html">
+                Barbarian
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+              <a href="movies/weapons.html">
+                Weapons
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="dir" data-tags="curry barker regista regia horror obsession milk and serial youtube alabama microbudget">
+          <img class="dir__photo" src="https://image.tmdb.org/t/p/w300/A16CxGKlkQYryoxGpxzKj4Wxk83.jpg"
+               alt="Ritratto di Curry Barker" width="300" height="450" loading="lazy" decoding="async">
+          <div class="dir__body">
+            <p class="dir__kicker">Horror, Thriller</p>
+            <h3 class="dir__name">Curry Barker</h3>
+            <p class="dir__bio">
+              Alabama, ventisei anni, e una gavetta fatta interamente su YouTube fra sketch comici e
+              found footage girati con quello che aveva. Scrive, dirige e monta da solo, e i suoi film
+              hanno il tempismo di chi ha passato anni a capire dove cade una battuta — con la differenza
+              che al posto della battuta, adesso, mette qualcos'altro.
+            </p>
+            <p class="dir__link">
+              <a href="movies/obsession.html">
+                Obsession
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="dir" data-tags="kane parsons kane pixels regista regia horror backrooms a24 youtube liminale effetti visivi">
+          <img class="dir__photo" src="https://image.tmdb.org/t/p/w300/l4hXiK0NI84l328p6V3DEvDtgFE.jpg"
+               alt="Ritratto di Kane Parsons" width="300" height="450" loading="lazy" decoding="async">
+          <div class="dir__body">
+            <p class="dir__kicker">Horror, Liminale</p>
+            <h3 class="dir__name">Kane Parsons</h3>
+            <p class="dir__bio">
+              Ha cominciato a quindici anni caricando su YouTube corti in computer grafica ambientati in
+              corridoi che non finiscono mai, ed è diventato il più giovane regista mai messo sotto
+              contratto dalla A24. Cosa più sorprendente: potendo rifare tutto al computer, ha preteso
+              che i corridoi venissero costruiti davvero.
+            </p>
+            <p class="dir__link">
+              <a href="movies/backrooms.html">
+                Backrooms
+                <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="no-results" id="noDirs" hidden>Nessun regista corrisponde alla tua ricerca.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+
+    <div>
+      <a class="logo" href="index.html" aria-label="L'Antro — home">
+        <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+        <span class="logo__text"><strong>L'</strong>ANTRO</span>
+      </a>
+      <p class="site-footer__about">
+        Recensioni di cinema scritte, senza fretta.
+        Un posto buio dove si parla di film per esteso.
+      </p>
+    </div>
+
+    <nav aria-labelledby="f-nav-1">
+      <h2 class="site-footer__title" id="f-nav-1">Esplora</h2>
+      <ul class="site-footer__list">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="recensioni.html">Recensioni</a></li>
+        <li><a href="archivio.html">Archivio</a></li>
+        <li><a href="registi.html">Registi</a></li>
+        <li><a href="autori.html">Chi siamo</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© <span id="year">2026</span> L'Antro. Tutti i diritti riservati.</p>
+  </div>
+  <div class="container">
+    <aside class="ai-notice" aria-label="Avviso sull'origine dei contenuti">
+      <strong>Attenzione:</strong> questo sito è interamente generato con l'AI a soli scopi accademici e senza fini di lucro.
+    </aside>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Torna in cima" hidden>
+  <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+
+<title>Hokum: l'albergo è aperto, la suite nuziale un po' meno — L'Antro</title>
+<meta name="description" content="Recensione di Hokum (2026) di Damian McCarthy: uno scrittore, un albergo irlandese fuori stagione e una storia di strega che nessuno voleva raccontargli.">
+<link rel="canonical" href="https://www.lantro.example/movies/hokum.html">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="L'Antro">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Hokum: l'albergo è aperto, la suite nuziale un po' meno">
+<meta property="og:description" content="Damian McCarthy, 2026: Adam Scott, un albergo in contea di Cork e una ghost story costruita a mano.">
+<meta property="og:image" content="https://image.tmdb.org/t/p/w1280/qY7zVZ7liULhfRoXg4c9Xl83LcR.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23E50914'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23fff' text-anchor='middle'>A</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-camera" viewBox="0 0 32 24">
+    <rect x="0" y="2" width="21" height="20" rx="3" fill="currentColor"/>
+    <path d="M23 10l9-6v16l-9-6z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-close" viewBox="0 0 24 24">
+    <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 6.5V12l3.5 2.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24">
+    <path d="M4 20l1-4.5L15.5 5A2.1 2.1 0 0 1 18.5 8L8 18.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24">
+    <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24">
+    <path d="M12 20V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24">
+    <path d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header is-solid" id="header">
+  <div class="container site-header__inner">
+
+    <a class="logo" href="../index.html" aria-label="L'Antro — home">
+      <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+      <span class="logo__text"><strong>L'</strong>ANTRO</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigazione principale">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#home">Home</a></li>
+        <li><a class="nav__link is-active" href="../recensioni.html" aria-current="page">Recensioni</a></li>
+        <li><a class="nav__link" href="../archivio.html">Archivio</a></li>
+        <li><a class="nav__link" href="../registi.html">Registi</a></li>
+        <li><a class="nav__link" href="../autori.html">Chi siamo</a></li>
+        <li><a class="nav__link" href="../gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="icon-btn" id="searchToggle" type="button"
+              aria-label="Apri la ricerca" aria-expanded="false" aria-controls="searchPanel">
+        <svg width="22" height="22" aria-hidden="true"><use href="#i-search"></use></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="../recensioni.html">Tutte le recensioni</a>
+      <button class="burger" id="burger" type="button"
+              aria-label="Apri il menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel" id="searchPanel" hidden>
+    <div class="container search-panel__inner">
+      <form class="search-form" role="search" id="searchForm" method="get" action="../index.html">
+        <svg class="search-form__icon" width="20" height="20" aria-hidden="true"><use href="#i-search"></use></svg>
+        <label class="visually-hidden" for="searchInput">Cerca una recensione</label>
+        <input class="search-form__input" id="searchInput" name="q" type="search"
+               placeholder="Cerca un film, un regista, un genere…" autocomplete="off">
+        <button class="icon-btn search-form__close" id="searchClose" type="button" aria-label="Chiudi la ricerca">
+          <svg width="20" height="20" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </form>
+      <p class="search-panel__hint" id="searchStatus" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</header>
+
+<div class="read-progress" id="readProgress" aria-hidden="true"><span></span></div>
+
+<main id="main">
+<article class="article">
+
+  <!-- ---------- Testata ---------- -->
+  <header class="article__head">
+    <div class="container article__head-inner">
+      <nav class="crumbs" aria-label="Percorso">
+        <a href="../index.html">Home</a> <span aria-hidden="true">/</span>
+        <a href="../recensioni.html">Recensioni</a> <span aria-hidden="true">/</span>
+        <span aria-current="page">Hokum</span>
+      </nav>
+
+      <p class="badge badge--static">Ghost story</p>
+
+      <h1 class="article__title">Hokum: l'albergo è aperto, la suite nuziale un po' meno</h1>
+
+      <p class="article__standfirst">
+        Damian McCarthy arriva al terzo film con dieci volte il budget dei precedenti, un attore
+        americano famoso e la stessa contea di Cork di sempre. Il timore era che il salto gli togliesse
+        le mani. Non gliele ha tolte.
+      </p>
+
+      <p class="article__meta">
+        <span class="meta-item">
+          <svg class="ico-red" width="18" height="18" aria-hidden="true"><use href="#i-pen"></use></svg>
+          di <strong>Nico Baldan</strong>
+        </span>
+        <span class="dot" aria-hidden="true"></span>
+        <time datetime="2026-08-07">7 agosto 2026</time>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="meta-item">
+          <svg class="ico-red" width="18" height="18" aria-hidden="true"><use href="#i-clock"></use></svg>
+          9 min di lettura
+        </span>
+      </p>
+    </div>
+  </header>
+
+  <figure class="article__hero article__hero--poster">
+    <div class="poster-stage"
+         style="--stage-bg:url('https://image.tmdb.org/t/p/w1280/qY7zVZ7liULhfRoXg4c9Xl83LcR.jpg')">
+      <img src="https://image.tmdb.org/t/p/w500/nhF54SQmeaMUODgRKEuMMJoTysT.jpg"
+           alt="Locandina ufficiale di Hokum (2026)"
+           width="500" height="750" fetchpriority="high" decoding="async">
+    </div>
+    <figcaption>Locandina ufficiale — Hokum (Damian McCarthy, 2026).</figcaption>
+  </figure>
+
+  <!-- ---------- Corpo ---------- -->
+  <div class="container article__layout">
+
+    <div class="article__body">
+
+      <p>
+        <em>Hokum</em>, in inglese, vuol dire più o meno «fandonia»: la roba che si racconta per far
+        colpo, la superstizione da bancone. È il titolo giusto per un film che passa un'ora a chiedersi
+        se quello che sta succedendo stia davvero succedendo, e che alla fine risponde nell'unico modo
+        onesto, cioè spostando la domanda.
+      </p>
+
+      <p>
+        Ohm Bauman (Adam Scott) è uno scrittore che ha smesso di scrivere. Arriva in un albergo fuori
+        stagione da qualche parte in Irlanda con l'urna dei genitori nel bagagliaio e l'intenzione di
+        sbrigare una faccenda in due giorni. Alla reception c'è Mal (Peter Coonan), che gli dà la chiave
+        e un'informazione non richiesta sulla suite nuziale, e al bar c'è Fiona (Florence Ordesh), che
+        gliene dà un'altra. Da lì in avanti Ohm fa quello che fanno gli scrittori bloccati quando
+        qualcuno gli offre una storia: chiede il secondo bicchiere e comincia a prendere appunti.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/e9UvRjJAqn2hLXDfMHU1LFMEKGv.jpg"
+             alt="Ohm con una lampada a petrolio davanti a una porta di legno" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>Una lampada, una porta, un uomo che non ha nessuna ragione professionale per aprirla. McCarthy non ha bisogno di altro per un atto intero.</figcaption>
+      </figure>
+
+      <h2>Un regista che si fida degli oggetti</h2>
+
+      <p>
+        Chi ha visto <a href="oddity.html">Oddity</a> sa già come lavora McCarthy: mette una cosa nel
+        quadro, la tiene ferma, non la commenta, e aspetta che sia lo spettatore a guardarla troppo a
+        lungo. In <em>Hokum</em> le cose sono una lampada a petrolio, un cerchio tracciato per terra, una
+        testa di bambola smaltata e una serie di porte numerate che si somigliano tutte. Non c'è
+        praticamente computer grafica; c'è un direttore della fotografia, Colm Hogan, che illumina gli
+        interni con quello che si vede in campo e lascia il resto nero, e ci sono due o tre effetti
+        pratici che nel 2026 fanno la figura che facevano trent'anni fa, cioè un'ottima figura.
+      </p>
+
+      <p>
+        Il salto produttivo si sente in una cosa sola, e per fortuna è quella giusta: lo spazio. Gli
+        altri film di McCarthy stavano in una casa; qui c'è un albergo intero, con corridoi che
+        continuano, una scala di servizio, una cantina, un giardino. Lui lo usa con una pazienza da
+        geometra: il film ci fa imparare la pianta dell'edificio nella prima mezz'ora, e poi comincia a
+        barare sulla pianta. È il trucco più antico della ghost story e funziona ancora perché richiede
+        precisione, non soldi.
+      </p>
+
+      <blockquote class="pullquote">
+        <p>La paura, qui, non è che ci sia qualcosa in corridoio. È che il corridoio sia più lungo di ieri.</p>
+      </blockquote>
+
+      <p>
+        Joseph Bishara — che di solito lavora su film molto più rumorosi — firma una partitura che per
+        due terzi si limita a un ronzio sotto la soglia, e nei momenti in cui potrebbe sottolineare
+        sceglie di togliere. C'è una sequenza al piano interrato, verso i settanta minuti, in cui l'audio
+        si riduce al respiro e a un rubinetto: nella sala in cui l'ho visto qualcuno ha smesso di
+        masticare i popcorn, che è l'unica recensione attendibile.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/arNKUmatyuAjDsO8y3BNfu7jJZc.jpg"
+             alt="Ohm seduto dentro un cerchio tracciato sul pavimento" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>Il cerchio. Nessuno spiega chi l'abbia disegnato, e il film ha ragione a non farlo.</figcaption>
+      </figure>
+
+      <h2>Adam Scott, e perché è la scelta giusta</h2>
+
+      <p>
+        Sulla carta era il rischio più grosso: prendere un attore che il pubblico associa alla commedia
+        e metterlo dentro una ghost story irlandese. In pratica è il motivo per cui il film tiene. Scott
+        ha una faccia che di default sembra sul punto di fare una battuta, e McCarthy la usa come si usa
+        una superficie riflettente: per i primi quaranta minuti Ohm non crede a niente, prende in giro
+        tutti, tratta il folklore locale come materiale da capitolo. Quando smette di scherzare non c'è
+        un momento chiaro in cui succede. È solo che a un certo punto ci si accorge che non lo fa più da
+        un po'.
+      </p>
+
+      <p>
+        Attorno a lui, McCarthy schiera facce del cinema irlandese che sanno esattamente cosa devono
+        fare: Peter Coonan, in particolare, costruisce un portiere di notte che è insieme cortese e
+        inservibile, e David Wilmot passa da comparsa a perno del film senza cambiare registro. È un
+        cast che parla piano e non spiega, e in un genere che vive di spiegazioni è quasi una posizione
+        politica.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/mPKLyaBPSvY6LTRja8PfsagY7O7.jpg"
+             alt="Una donna con i capelli bagnati porta un dito davanti alla bocca" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>«Zitto.» Un'unica inquadratura, tenuta più a lungo del necessario, che è poi il metodo di tutto il film.</figcaption>
+      </figure>
+
+      <h2>Quello che non mi torna</h2>
+
+      <p>
+        Il film si concede una linea di lettura psicologica — il passato di Ohm, un lutto, un senso di
+        colpa — che a mio parere è la cosa meno interessante che contenga, e che nell'ultima mezz'ora
+        prende un po' troppo spazio. Non è la deriva didascalica di certi horror recenti, ma è comunque
+        una spiegazione, e questo film era più forte quando non ne aveva nessuna. C'è anche una scena
+        onirica di troppo, con un personaggio che arriva direttamente dal romanzo che Ohm sta scrivendo:
+        idea bellissima, esecuzione che rompe il patto di realismo appena costruito.
+      </p>
+
+      <p>
+        Poi c'è la questione dei soldi. <em>Hokum</em> è costato cinque milioni di dollari e ne ha
+        incassati oltre ventiquattro, ed è stato distribuito da Neon con una campagna vera. È una notizia
+        ottima e leggermente preoccupante insieme: McCarthy è arrivato al pubblico grande facendo
+        esattamente quello che faceva prima, ma il prossimo film glielo chiederanno più lungo, più
+        spiegato e con più gente dentro. Spero che dica di no.
+      </p>
+
+      <p>
+        Nel frattempo questo è un film che consiglio senza riserve, e che consiglio soprattutto in sala,
+        perché è costruito su un buio che a casa non si ottiene e su un volume che il salotto non regge.
+        Il novanta per cento dei fotogrammi contiene una sola sorgente di luce. È da un pezzo che non
+        vedevo qualcuno avere così poca paura di spegnere.
+      </p>
+
+      <p class="article__signature">— N. B.</p>
+    </div>
+
+    <!-- ---------- Colonna laterale ---------- -->
+    <aside class="article__aside">
+
+      <div class="filmcard">
+        <h2 class="filmcard__title">La scheda</h2>
+        <dl class="filmcard__list">
+          <dt>Titolo</dt><dd>Hokum</dd>
+          <dt>Regia</dt><dd>Damian McCarthy</dd>
+          <dt>Anno</dt><dd>2026</dd>
+          <dt>Durata</dt><dd><time datetime="PT108M">108 min</time></dd>
+          <dt>Genere</dt><dd>Horror</dd>
+          <dt>Paese</dt><dd>Irlanda, USA</dd>
+          <dt>Cast</dt><dd>Adam Scott, Peter Coonan, David Wilmot, Florence Ordesh, Brendan Conroy, Austin Amelio</dd>
+          <dt>Musiche</dt><dd>Joseph Bishara</dd>
+          <dt>Fotografia</dt><dd>Colm Hogan</dd>
+          <dt>Montaggio</dt><dd>Brian Philip Davis</dd>
+          <dt>Distribuzione</dt><dd>Neon</dd>
+          <dt>Anteprima</dt><dd>SXSW, 14 marzo 2026</dd>
+        </dl>
+      </div>
+
+      <div class="authorcard">
+        <span class="authorcard__avatar" aria-hidden="true">NB</span>
+        <div>
+          <p class="authorcard__name">Nico Baldan</p>
+          <p class="authorcard__bio">
+            Detto «Vermiglio». Entra in sala con un quaderno e ne esce con lo stesso quaderno, però bagnato.
+            <a href="../autori.html">Chi siamo</a>
+          </p>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ---------- Correlate ---------- -->
+  <section class="section" aria-labelledby="related-title">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title" id="related-title">Continua a leggere</h2>
+          <p class="section__sub">Altre recensioni dall'archivio.</p>
+        </div>
+        <a class="btn btn--ghost btn--sm" href="../recensioni.html">
+          Tutte le recensioni
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+
+      <div class="grid">
+
+        <article class="card">
+          <a class="card__media" href="oddity.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/b2eV2XVYTMXfY1rxvwo1wfNWnmX.jpg" alt=""
+                 width="780" height="439" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-05-27">27 maggio 2026</time> · Sofia Ricci</p>
+          <h3 class="card__title"><a href="oddity.html">Oddity: un uomo di legno seduto a tavola, e nessuno che lo mandi via</a></h3>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            9 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di Damian McCarthy
+          </p>
+        </article>
+
+        <article class="card">
+          <a class="card__media" href="babadook.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/AeZYS1KwWVlAHmTdMbIyw4qUoY.jpg" alt=""
+                 width="800" height="450" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-07-22">22 luglio 2026</time> · Sofia Ricci</p>
+          <h3 class="card__title"><a href="babadook.html">The Babadook: il mostro vive in cantina, il lutto pure</a></h3>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            9 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di Jennifer Kent
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <a class="logo" href="../index.html" aria-label="L'Antro — home">
+        <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+        <span class="logo__text"><strong>L'</strong>ANTRO</span>
+      </a>
+      <p class="site-footer__about">
+        Recensioni di cinema scritte, senza fretta.
+        Un posto buio dove si parla di film per esteso.
+      </p>
+    </div>
+    <nav aria-labelledby="f-nav-1">
+      <h2 class="site-footer__title" id="f-nav-1">Esplora</h2>
+      <ul class="site-footer__list">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../recensioni.html">Recensioni</a></li>
+        <li><a href="../archivio.html">Archivio</a></li>
+        <li><a href="../registi.html">Registi</a></li>
+        <li><a href="../autori.html">Chi siamo</a></li>
+        <li><a href="../gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© <span id="year">2026</span> L'Antro. Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Torna in cima" hidden>
+  <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Hokum: l'albergo è aperto, la suite nuziale un po' meno",
+  "description": "Recensione di Hokum (2026) di Damian McCarthy.",
+  "inLanguage": "it-IT",
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07",
+  "timeRequired": "PT9M",
+  "image": "https://image.tmdb.org/t/p/w1280/qY7zVZ7liULhfRoXg4c9Xl83LcR.jpg",
+  "author": { "@type": "Person", "name": "Nico Baldan" },
+  "publisher": { "@type": "Organization", "name": "L'Antro" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.lantro.example/movies/hokum.html" },
+  "isPartOf": { "@type": "Blog", "@id": "https://www.lantro.example/#blog" },
+  "about": {
+    "@type": "Movie",
+    "name": "Hokum",
+    "genre": ["Horror"],
+    "duration": "PT108M",
+    "dateCreated": "2026",
+    "countryOfOrigin": "IE",
+    "director": { "@type": "Person", "name": "Damian McCarthy" },
+    "musicBy": { "@type": "Person", "name": "Joseph Bishara" },
+    "actor": [
+      { "@type": "Person", "name": "Adam Scott" },
+      { "@type": "Person", "name": "Peter Coonan" },
+      { "@type": "Person", "name": "David Wilmot" }
+    ]
+  }
+}
+</script>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

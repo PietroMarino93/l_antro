@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+
+<title>Barbarian: la casa è in affitto, il problema è sotto — L'Antro</title>
+<meta name="description" content="Recensione di Barbarian (2022) di Zach Cregger: una prenotazione doppia a Detroit, un seminterrato che non finisce mai e un film che a metà cambia protagonista.">
+<link rel="canonical" href="https://www.lantro.example/movies/barbarian.html">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="L'Antro">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Barbarian: la casa è in affitto, il problema è sotto">
+<meta property="og:description" content="Zach Cregger, 2022: una prenotazione doppia, un quartiere di Detroit e un seminterrato che non finisce mai.">
+<meta property="og:image" content="https://image.tmdb.org/t/p/w1280/kSeU4uk19t82k6Cao7hc6ktDYhF.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23E50914'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23fff' text-anchor='middle'>A</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-camera" viewBox="0 0 32 24">
+    <rect x="0" y="2" width="21" height="20" rx="3" fill="currentColor"/>
+    <path d="M23 10l9-6v16l-9-6z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-close" viewBox="0 0 24 24">
+    <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 6.5V12l3.5 2.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24">
+    <path d="M4 20l1-4.5L15.5 5A2.1 2.1 0 0 1 18.5 8L8 18.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24">
+    <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24">
+    <path d="M12 20V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24">
+    <path d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header is-solid" id="header">
+  <div class="container site-header__inner">
+
+    <a class="logo" href="../index.html" aria-label="L'Antro — home">
+      <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+      <span class="logo__text"><strong>L'</strong>ANTRO</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigazione principale">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#home">Home</a></li>
+        <li><a class="nav__link is-active" href="../recensioni.html" aria-current="page">Recensioni</a></li>
+        <li><a class="nav__link" href="../archivio.html">Archivio</a></li>
+        <li><a class="nav__link" href="../registi.html">Registi</a></li>
+        <li><a class="nav__link" href="../autori.html">Chi siamo</a></li>
+        <li><a class="nav__link" href="../gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="icon-btn" id="searchToggle" type="button"
+              aria-label="Apri la ricerca" aria-expanded="false" aria-controls="searchPanel">
+        <svg width="22" height="22" aria-hidden="true"><use href="#i-search"></use></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="../recensioni.html">Tutte le recensioni</a>
+      <button class="burger" id="burger" type="button"
+              aria-label="Apri il menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel" id="searchPanel" hidden>
+    <div class="container search-panel__inner">
+      <form class="search-form" role="search" id="searchForm" method="get" action="../index.html">
+        <svg class="search-form__icon" width="20" height="20" aria-hidden="true"><use href="#i-search"></use></svg>
+        <label class="visually-hidden" for="searchInput">Cerca una recensione</label>
+        <input class="search-form__input" id="searchInput" name="q" type="search"
+               placeholder="Cerca un film, un regista, un genere…" autocomplete="off">
+        <button class="icon-btn search-form__close" id="searchClose" type="button" aria-label="Chiudi la ricerca">
+          <svg width="20" height="20" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </form>
+      <p class="search-panel__hint" id="searchStatus" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</header>
+
+<div class="read-progress" id="readProgress" aria-hidden="true"><span></span></div>
+
+<main id="main">
+<article class="article">
+
+  <!-- ---------- Testata ---------- -->
+  <header class="article__head">
+    <div class="container article__head-inner">
+      <nav class="crumbs" aria-label="Percorso">
+        <a href="../index.html">Home</a> <span aria-hidden="true">/</span>
+        <a href="../recensioni.html">Recensioni</a> <span aria-hidden="true">/</span>
+        <span aria-current="page">Barbarian</span>
+      </nav>
+
+      <p class="badge badge--static">Horror urbano</p>
+
+      <h1 class="article__title">Barbarian: la casa è in affitto, il problema è sotto</h1>
+
+      <p class="article__standfirst">
+        Nel 2022 è uscito senza che nessuno sapesse cosa fosse, e per una volta il marketing aveva
+        ragione a tacere. Zach Cregger prende una situazione da commedia degli equivoci — due persone
+        prenotano la stessa casa — e la porta dove non doveva andare, cambiando protagonista a metà film.
+      </p>
+
+      <p class="article__meta">
+        <span class="meta-item">
+          <svg class="ico-red" width="18" height="18" aria-hidden="true"><use href="#i-pen"></use></svg>
+          di <strong>Marta Cinti</strong>
+        </span>
+        <span class="dot" aria-hidden="true"></span>
+        <time datetime="2026-06-17">17 giugno 2026</time>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="meta-item">
+          <svg class="ico-red" width="18" height="18" aria-hidden="true"><use href="#i-clock"></use></svg>
+          10 min di lettura
+        </span>
+      </p>
+    </div>
+  </header>
+
+  <figure class="article__hero article__hero--poster">
+    <div class="poster-stage"
+         style="--stage-bg:url('https://image.tmdb.org/t/p/w1280/kSeU4uk19t82k6Cao7hc6ktDYhF.jpg')">
+      <img src="https://image.tmdb.org/t/p/w500/oUcJ7FMDODJ5wKgL3g4RCoYJ68Z.jpg"
+           alt="Locandina ufficiale di Barbarian (2022)"
+           width="500" height="750" fetchpriority="high" decoding="async">
+    </div>
+    <figcaption>Locandina ufficiale — Barbarian (Zach Cregger, 2022).</figcaption>
+  </figure>
+
+  <!-- ---------- Corpo ---------- -->
+  <div class="container article__layout">
+
+    <div class="article__body">
+
+      <p>
+        Piove. Una ragazza arriva in macchina davanti a una casetta di legno in un quartiere periferico
+        di Detroit, con la prenotazione stampata sul telefono e un colloquio di lavoro il giorno dopo.
+        La cassetta delle chiavi è vuota. Dentro c'è già qualcuno. È l'inizio più banale possibile per
+        un film horror del ventunesimo secolo, e per venti minuti <em>Barbarian</em> lo tratta esattamente
+        per quello che è: una seccatura burocratica tra due sconosciuti educati, in una casa in cui il
+        riscaldamento funziona benissimo.
+      </p>
+
+      <p>
+        La sceneggiatura è di Zach Cregger, che fino a quel momento era noto — quando era noto — per
+        dieci anni di sketch demenziali con i Whitest Kids U' Know. Nel 2022 nessuno si aspettava niente
+        da lui, e questo si è rivelato il vantaggio competitivo più grosso del film: <em>Barbarian</em>
+        è uscito in sala il 9 settembre con un trailer che non mostrava nulla e una campagna che chiedeva
+        esplicitamente di non raccontare la trama. È costato quattro milioni e mezzo di dollari e ne ha
+        incassati oltre quarantasei. Il pubblico gli ha dato un CinemaScore C+, cioè un voto da film
+        sbagliato, mentre la critica lo portava al 92% su Rotten Tomatoes. Quel disaccordo non è un
+        incidente: è il film.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/xtKUTXAWQvet4i0HRA5v0iO3iL5.jpg"
+             alt="Primo piano di Keith nella casa di Barbary Street" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>Bill Skarsgård fa una cosa difficilissima: recitare la propria reputazione al contrario, per quaranta minuti.</figcaption>
+      </figure>
+
+      <h2>Il primo tempo è un esercizio di sospetto</h2>
+
+      <p>
+        La prima mezz'ora è costruita su un solo meccanismo, e lo esegue con una pulizia che merita di
+        essere studiata. Tess (Georgina Campbell) non sa se fidarsi di Keith (Bill Skarsgård). Noi
+        nemmeno. Cregger gioca sporco e lo sa: prende l'attore che tutto il mondo ha visto truccato da
+        Pennywise e lo mette a fare il tipo gentile che prepara il tè, si scusa, dorme sul divano.
+        Ogni gesto ragionevole diventa sospetto proprio perché è ragionevole. Non c'è musica che ci dica
+        cosa pensare, non c'è un jump scare a rassicurarci sul genere: c'è solo una donna che conta le
+        uscite di sicurezza di una casa in cui è entrata da un'ora.
+      </p>
+
+      <p>
+        E qui il film fa la cosa più intelligente che gli riesca. Tutta questa diffidenza è, dal punto di
+        vista narrativo, un depistaggio. Ma non è un depistaggio a vuoto: è la descrizione precisa di
+        come si muove nel mondo chi ha imparato a valutare gli sconosciuti per mestiere. Tess controlla
+        la porta, controlla la chiave, controlla dove tiene il telefono. Fa tutto giusto. Il film la
+        premia mandandola comunque in cantina, perché la lavatrice è lì e la carta igienica pure, e
+        questo è l'unico momento in cui <em>Barbarian</em> chiede una piccola concessione allo spettatore.
+        Poi non ne chiede più.
+      </p>
+
+      <blockquote class="pullquote">
+        <p>Il seminterrato non è una metafora. È un metro di misura: quanto in basso arriva questa città prima che qualcuno se ne accorga.</p>
+      </blockquote>
+
+      <p>
+        La casa è a Brightmoor, e Cregger non lo dice per colore locale. È uno dei quartieri di Detroit
+        che si sono svuotati per primi: file di villette identiche, la metà con le finestre murate, i
+        prati alti fino al ginocchio. Il film ci passa dentro due volte, una di notte e una in pieno
+        giorno, e la seconda è più spaventosa della prima. Un'intera zona in cui si può urlare per
+        settimane senza che nessuno venga a vedere non è un espediente da sceneggiatura: è una condizione
+        immobiliare documentata, e il film ci costruisce sopra tutto il resto.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/b5Sq1p2qnLNlaU9XOwjNNdbWmkP.jpg"
+             alt="Una figura in controluce sulla porta in cima alle scale del seminterrato" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>Dal fondo delle scale la porta è soltanto un rettangolo di luce. Zach Kuperstein la inquadra così e aspetta.</figcaption>
+      </figure>
+
+      <h2>Poi arriva AJ, e il film cambia idea</h2>
+
+      <p>
+        A metà esatta, senza preavviso, <em>Barbarian</em> smette. Cambia luce, cambia costa, cambia
+        protagonista. Entra Justin Long nei panni di un attore televisivo di seconda fascia che sta
+        perdendo la carriera per un'accusa di violenza sessuale e che, per far cassa, va a vendere una
+        proprietà che possiede a Detroit e non ha mai visto. Il pubblico che aveva comprato il biglietto
+        per un thriller in una casa si trova davanti quindici minuti di commedia amara sulla
+        deresponsabilizzazione, girati come un altro film, con un'altra tavolozza. È il momento in cui
+        il CinemaScore si è rotto.
+      </p>
+
+      <p>
+        A me sembra la mossa migliore del 2022. Non per il gusto della sorpresa — quello dura una volta
+        sola — ma perché quello che sembra un capriccio strutturale è in realtà l'unica tesi del film,
+        messa in scena invece che detta. <em>Barbarian</em> parla di uomini che hanno costruito qualcosa
+        di orribile e di altri uomini che ci vivono sopra senza chiedersi cosa ci sia sotto. AJ non è
+        il mostro: è il proprietario. La prima cosa che fa quando scopre il tunnel non è chiamare la
+        polizia, è misurarlo, perché sono metri quadri in più da mettere nell'annuncio. Non c'è un solo
+        momento in cui il film debba spiegarlo, e questo è raro.
+      </p>
+
+      <p>
+        Il terzo blocco, ambientato negli anni Ottanta e girato in 4:3 con la grana del videotape, chiude
+        il cerchio mostrando Frank (Richard Brake) mentre fa la spesa. Non c'è violenza in campo: c'è un
+        uomo educato che compra corda, nastro adesivo e un ciuccio, e un cassiere che gli augura buona
+        giornata. Sono novanta secondi e valgono tutta la spiegazione che il film si concede.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/bUjPcNS8GweBh5Nxp8oq9Dy712Z.jpg"
+             alt="La Madre nel tunnel sotto la casa" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>La Madre. Matthew Patrick Davis la muove come qualcuno che ha imparato tutto da solo, al buio, senza nessuno che correggesse.</figcaption>
+      </figure>
+
+      <h2>La cosa nel tunnel, e cosa se ne fa il film</h2>
+
+      <p>
+        La creatura — la Madre, nei credit — è il punto in cui <em>Barbarian</em> rischia di più. Su
+        carta è un mostro da drive-in: nuda, deforme, con una fissazione per l'allattamento. In sala
+        funziona per due ragioni. La prima è fisica: Davis è alto più di due metri e si muove con
+        un'esitazione che nessuna computer grafica avrebbe azzeccato, quel mezzo secondo di troppo prima
+        di ogni gesto. La seconda è che il film non la usa mai come punizione. La Madre non insegue
+        nessuno per il piacere di inseguire: raccoglie, sistema, nutre, ripete la sola cosa che le è
+        stata insegnata. Quando si capisce cosa sia — e il film ce lo dice con un fascicolo e non con un
+        monologo — la scena più insopportabile del film diventa retroattivamente la più triste.
+      </p>
+
+      <p>
+        Anna Drubich firma una partitura che lavora per masse basse e silenzi lunghi, e nel terzo atto
+        si permette un tema quasi melodico che è la sola concessione sentimentale di tutta l'operazione.
+        Il montaggio di Joe Murphy — lo stesso di <a href="weapons.html">Weapons</a>, tre anni dopo —
+        tiene insieme tre film diversi senza mai far sentire la giuntura, e questo, con una struttura
+        così, è metà del lavoro.
+      </p>
+
+      <p>
+        Difetti ce ne sono. L'ultimo quarto d'ora, sulla torre dell'acqua, è il pezzo più convenzionale
+        del film: dopo un'ora e mezza di regole nuove, si torna a inseguimento e caduta, e si sente.
+        E il personaggio di Andre, il senzatetto che spiega le cose, è la scorciatoia che Cregger si
+        concede per non dover girare altri dieci minuti. Sono difetti da film che ha osato molto, non
+        da film che ha osato poco.
+      </p>
+
+      <p>
+        Quattro anni dopo, <em>Barbarian</em> resta il modo più efficace che conosco per spiegare a
+        qualcuno cosa può fare la struttura in un horror. Non è il film più profondo del decennio e non
+        ci prova. È una macchina che sposta il punto di vista tre volte e ogni volta ti costringe a
+        rivalutare quello che avevi appena guardato. Io lo tengo in una categoria tutta sua, insieme ai
+        pochi film che vale la pena rivedere sapendo già tutto: la seconda volta non fa paura, fa
+        rabbia, ed è un miglioramento.
+      </p>
+
+      <p class="article__signature">— M. C.</p>
+    </div>
+
+    <!-- ---------- Colonna laterale ---------- -->
+    <aside class="article__aside">
+
+      <div class="filmcard">
+        <h2 class="filmcard__title">La scheda</h2>
+        <dl class="filmcard__list">
+          <dt>Titolo</dt><dd>Barbarian</dd>
+          <dt>Regia</dt><dd>Zach Cregger</dd>
+          <dt>Anno</dt><dd>2022</dd>
+          <dt>Durata</dt><dd><time datetime="PT103M">103 min</time></dd>
+          <dt>Genere</dt><dd>Horror, Mystery, Thriller</dd>
+          <dt>Paese</dt><dd>USA</dd>
+          <dt>Cast</dt><dd>Georgina Campbell, Bill Skarsgård, Justin Long, Richard Brake, Matthew Patrick Davis</dd>
+          <dt>Musiche</dt><dd>Anna Drubich</dd>
+          <dt>Fotografia</dt><dd>Zach Kuperstein</dd>
+          <dt>Montaggio</dt><dd>Joe Murphy</dd>
+          <dt>Anteprima</dt><dd>San Diego Comic-Con, luglio 2022</dd>
+        </dl>
+      </div>
+
+      <div class="authorcard">
+        <span class="authorcard__avatar" aria-hidden="true">MC</span>
+        <div>
+          <p class="authorcard__name">Marta Cinti</p>
+          <p class="authorcard__bio">
+            Turno di notte in biblioteca. Cataloga i film in base al numero di corridoi percorsi al buio.
+            <a href="../autori.html">Chi siamo</a>
+          </p>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ---------- Correlate ---------- -->
+  <section class="section" aria-labelledby="related-title">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title" id="related-title">Continua a leggere</h2>
+          <p class="section__sub">Altre recensioni dall'archivio.</p>
+        </div>
+        <a class="btn btn--ghost btn--sm" href="../recensioni.html">
+          Tutte le recensioni
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+
+      <div class="grid">
+
+        <article class="card">
+          <a class="card__media" href="weapons.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/8ASH1sGCR6Bwuw9BdNl7X7QzS30.jpg" alt=""
+                 width="780" height="439" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-06-10">10 giugno 2026</time> · Adam Pryce</p>
+          <h3 class="card__title"><a href="weapons.html">Weapons: alle 2:17 escono di casa tutti insieme</a></h3>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            12 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di Zach Cregger
+          </p>
+        </article>
+
+        <article class="card">
+          <a class="card__media" href="noi.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/jNUCddkM1fjYcFIcEwFjc7s2H4V.jpg" alt=""
+                 width="780" height="439" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-06-24">24 giugno 2026</time> · Adam Pryce</p>
+          <h3 class="card__title"><a href="noi.html">Noi: quattro persone ferme sul vialetto, e nessuna se ne va</a></h3>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            10 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di Jordan Peele
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <a class="logo" href="../index.html" aria-label="L'Antro — home">
+        <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+        <span class="logo__text"><strong>L'</strong>ANTRO</span>
+      </a>
+      <p class="site-footer__about">
+        Recensioni di cinema scritte, senza fretta.
+        Un posto buio dove si parla di film per esteso.
+      </p>
+    </div>
+    <nav aria-labelledby="f-nav-1">
+      <h2 class="site-footer__title" id="f-nav-1">Esplora</h2>
+      <ul class="site-footer__list">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../recensioni.html">Recensioni</a></li>
+        <li><a href="../archivio.html">Archivio</a></li>
+        <li><a href="../registi.html">Registi</a></li>
+        <li><a href="../autori.html">Chi siamo</a></li>
+        <li><a href="../gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© <span id="year">2026</span> L'Antro. Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Torna in cima" hidden>
+  <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Barbarian: la casa è in affitto, il problema è sotto",
+  "description": "Recensione di Barbarian (2022) di Zach Cregger.",
+  "inLanguage": "it-IT",
+  "datePublished": "2026-06-17",
+  "dateModified": "2026-06-17",
+  "timeRequired": "PT10M",
+  "image": "https://image.tmdb.org/t/p/w1280/kSeU4uk19t82k6Cao7hc6ktDYhF.jpg",
+  "author": { "@type": "Person", "name": "Marta Cinti" },
+  "publisher": { "@type": "Organization", "name": "L'Antro" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.lantro.example/movies/barbarian.html" },
+  "isPartOf": { "@type": "Blog", "@id": "https://www.lantro.example/#blog" },
+  "about": {
+    "@type": "Movie",
+    "name": "Barbarian",
+    "genre": ["Horror", "Mystery", "Thriller"],
+    "duration": "PT103M",
+    "dateCreated": "2022",
+    "countryOfOrigin": "US",
+    "director": { "@type": "Person", "name": "Zach Cregger" },
+    "musicBy": { "@type": "Person", "name": "Anna Drubich" },
+    "actor": [
+      { "@type": "Person", "name": "Georgina Campbell" },
+      { "@type": "Person", "name": "Bill Skarsgård" },
+      { "@type": "Person", "name": "Justin Long" }
+    ]
+  }
+}
+</script>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

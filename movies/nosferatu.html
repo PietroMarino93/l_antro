@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+
+<title>Nosferatu: Eggers rifà Murnau e non chiede scusa a nessuno — L'Antro</title>
+<meta name="description" content="Recensione di Nosferatu (2024) di Robert Eggers: il rifacimento del film di Murnau del 1922, girato in 35mm, con Lily-Rose Depp e Bill Skarsgård.">
+<link rel="canonical" href="https://www.lantro.example/movies/nosferatu.html">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="L'Antro">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Nosferatu: Eggers rifà Murnau e non chiede scusa a nessuno">
+<meta property="og:description" content="Robert Eggers, 2024: Murnau rifatto in 35mm, con Lily-Rose Depp e un Orlok che non somiglia a nessuno.">
+<meta property="og:image" content="https://image.tmdb.org/t/p/w1280/gprjiZWY43vxSKngMha1wfb5TGG.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23E50914'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23fff' text-anchor='middle'>A</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-camera" viewBox="0 0 32 24">
+    <rect x="0" y="2" width="21" height="20" rx="3" fill="currentColor"/>
+    <path d="M23 10l9-6v16l-9-6z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-close" viewBox="0 0 24 24">
+    <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 6.5V12l3.5 2.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24">
+    <path d="M4 20l1-4.5L15.5 5A2.1 2.1 0 0 1 18.5 8L8 18.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24">
+    <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24">
+    <path d="M12 20V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24">
+    <path d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header is-solid" id="header">
+  <div class="container site-header__inner">
+
+    <a class="logo" href="../index.html" aria-label="L'Antro — home">
+      <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+      <span class="logo__text"><strong>L'</strong>ANTRO</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigazione principale">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#home">Home</a></li>
+        <li><a class="nav__link is-active" href="../recensioni.html" aria-current="page">Recensioni</a></li>
+        <li><a class="nav__link" href="../archivio.html">Archivio</a></li>
+        <li><a class="nav__link" href="../registi.html">Registi</a></li>
+        <li><a class="nav__link" href="../autori.html">Chi siamo</a></li>
+        <li><a class="nav__link" href="../gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="icon-btn" id="searchToggle" type="button"
+              aria-label="Apri la ricerca" aria-expanded="false" aria-controls="searchPanel">
+        <svg width="22" height="22" aria-hidden="true"><use href="#i-search"></use></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="../recensioni.html">Tutte le recensioni</a>
+      <button class="burger" id="burger" type="button"
+              aria-label="Apri il menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel" id="searchPanel" hidden>
+    <div class="container search-panel__inner">
+      <form class="search-form" role="search" id="searchForm" method="get" action="../index.html">
+        <svg class="search-form__icon" width="20" height="20" aria-hidden="true"><use href="#i-search"></use></svg>
+        <label class="visually-hidden" for="searchInput">Cerca una recensione</label>
+        <input class="search-form__input" id="searchInput" name="q" type="search"
+               placeholder="Cerca un film, un regista, un genere…" autocomplete="off">
+        <button class="icon-btn search-form__close" id="searchClose" type="button" aria-label="Chiudi la ricerca">
+          <svg width="20" height="20" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </form>
+      <p class="search-panel__hint" id="searchStatus" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</header>
+
+<div class="read-progress" id="readProgress" aria-hidden="true"><span></span></div>
+
+<main id="main">
+<article class="article">
+
+  <!-- ---------- Testata ---------- -->
+  <header class="article__head">
+    <div class="container article__head-inner">
+      <nav class="crumbs" aria-label="Percorso">
+        <a href="../index.html">Home</a> <span aria-hidden="true">/</span>
+        <a href="../recensioni.html">Recensioni</a> <span aria-hidden="true">/</span>
+        <span aria-current="page">Nosferatu</span>
+      </nav>
+
+      <p class="badge badge--static">Gotico</p>
+
+      <h1 class="article__title">Nosferatu: Eggers rifà Murnau e non chiede scusa a nessuno</h1>
+
+      <p class="article__standfirst">
+        Rifare <em>Nosferatu</em> è una cosa che si fa a proprio rischio: il film del 1922 è ancora lì e non ha bisogno di nessuno. Eggers ci ha messo nove anni, l'ha girato in pellicola e ha fatto l'unica scelta che poteva salvarlo — non imitare Murnau da nessuna parte.
+      </p>
+
+      <p class="article__meta">
+        <span class="meta-item">
+          <svg class="ico-red" width="18" height="18" aria-hidden="true"><use href="#i-pen"></use></svg>
+          di <strong>Nico Baldan</strong>
+        </span>
+        <span class="dot" aria-hidden="true"></span>
+        <time datetime="2026-04-29">29 aprile 2026</time>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="meta-item">
+          <svg class="ico-red" width="18" height="18" aria-hidden="true"><use href="#i-clock"></use></svg>
+          12 min di lettura
+        </span>
+      </p>
+    </div>
+  </header>
+
+  <figure class="article__hero article__hero--poster">
+    <div class="poster-stage"
+         style="--stage-bg:url('https://image.tmdb.org/t/p/w1280/gprjiZWY43vxSKngMha1wfb5TGG.jpg')">
+      <img src="https://image.tmdb.org/t/p/w500/1SftujfE9iqZpGJfnREO4IBeeqV.jpg"
+           alt="Locandina ufficiale di Nosferatu (Robert Eggers, 2024)"
+           width="500" height="750" fetchpriority="high" decoding="async">
+    </div>
+    <figcaption>Locandina ufficiale — Nosferatu (Robert Eggers, 2024).</figcaption>
+  </figure>
+
+  <!-- ---------- Corpo ---------- -->
+  <div class="container article__layout">
+
+    <div class="article__body">
+
+      <p>
+        Comincio con la dichiarazione d'obbligo: il <em>Nosferatu</em> di Murnau l'ho visto in pellicola
+        undici volte, sempre nella stessa sala, e considero l'accompagnamento dal vivo l'unico modo
+        decente di guardarlo. Ero quindi la persona più prevenuta d'Italia quando nel dicembre del 2024
+        è uscito questo. Ho comprato il biglietto per la proiezione del primo gennaio, che in Italia era
+        il giorno d'uscita, con l'atteggiamento di chi va a un funerale.
+      </p>
+
+      <p>
+        Non è un funerale. Ed è per una ragione che ci ho messo un po' a mettere a fuoco: Eggers non
+        rifà il film del 1922. Rifà il <em>soggetto</em> del film del 1922, che a sua volta era il
+        <em>Dracula</em> di Stoker copiato male per non pagare i diritti, e lo riporta indietro fino
+        alle carte da cui venivano tutti e due: il folklore vampirico dell'Europa orientale, gli
+        strigoi, i morti che tornano perché qualcuno li ha chiamati. Il conte Orlok di Bill Skarsgård
+        non ha le orecchie a punta, non ha le unghie lunghissime in campo per tutto il film e soprattutto
+        non ha niente della sagoma di Max Schreck. È un nobile transilvano del Cinquecento, con i baffi,
+        putrefatto, e la prima volta che parla il cinema smette di essere un posto tranquillo.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/6lrNtK2Kd871BfcgHjGZjUiSh7u.jpg"
+             alt="Una carrozza su una strada di montagna al chiaro di luna, un castello in lontananza" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>Il viaggio verso i Carpazi. Girato in Romania, al castello di Corvino: lo stesso che aveva usato Herzog nel 1979.</figcaption>
+      </figure>
+
+      <h2>La pellicola, e perché conta</h2>
+
+      <p>
+        Jarin Blaschke gira in 35 millimetri con lenti d'epoca e filtri che desaturano il colore fino a
+        lasciare quasi solo un blu di luna e un ocra di candela. Non è bianco e nero come
+        <a href="the-lighthouse.html">The Lighthouse</a>: è colore a cui è stato tolto il permesso di
+        essere allegro. La conseguenza pratica è che nelle scene notturne — che sono la maggior parte —
+        si vede pochissimo e si vede <em>bene</em>: la grana si muove, il nero non è mai piatto, e le
+        figure entrano nel quadro venendo fuori dal materiale invece che da un livello aggiunto dopo.
+        Pioggia vera, vento di macchina, cinquemila ratti addestrati. Digitale quasi zero.
+      </p>
+
+      <p>
+        Questo, per uno come me, è il motivo per cui il film esiste. Non perché la pellicola sia meglio
+        in astratto, discorso che ho smesso di fare da tempo, ma perché un film sul contagio, sulla
+        putrefazione e su una cosa che marcisce dentro una cassa non può permettersi immagini pulite. Il
+        <em>Nosferatu</em> del 1922 lo sapeva per necessità: aveva la pellicola che aveva. Questo lo sa
+        per scelta, e la scelta è costata cinquanta milioni di dollari a chi la pagava.
+      </p>
+
+      <blockquote class="pullquote">
+        <p>Un film sulla putrefazione non può permettersi un'immagine pulita. Questo è l'unico argomento sulla pellicola che mi interessi ancora.</p>
+      </blockquote>
+
+      <p>
+        Sull'attore, poi. Skarsgård ha perso peso, ha passato sei ore al giorno sotto le protesi e ha
+        costruito la voce lavorando con una cantante lirica islandese sul canto difonico mongolo,
+        rifiutando qualunque trattamento digitale. Il risultato è che Orlok non parla: emette. Ed è
+        l'unica cosa del film che non riesco a togliermi dalle orecchie.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/uWOJbarUXfVf6B4o0368dh138eR.jpg"
+             alt="Una mano artigliata sopra un volto, in controluce" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>Eggers mostra Orlok pochissimo e quasi sempre di scorcio. Quando lo mostra intero, è troppo tardi per chiudere gli occhi.</figcaption>
+      </figure>
+
+      <h2>Ellen</h2>
+
+      <p>
+        La differenza più grossa rispetto a tutte le versioni precedenti sta qui. Nel film di Murnau
+        Ellen è una vittima che si sacrifica; nel film di Herzog del 1979 è una donna lucida in un mondo
+        di sciocchi. In questo, Ellen è la causa: il legame con Orlok comincia da lei, da bambina, da una
+        preghiera fatta nel buio a chiunque volesse rispondere. È una scelta che ribalta l'impianto morale
+        del racconto e che non tutti hanno digerito, e Lily-Rose Depp la regge con una prova fisica che
+        nel 2024 è stata sottovalutata perché arrivava dopo mesi di discussioni sul cognome.
+      </p>
+
+      <p>
+        Intorno a lei Nicholas Hoult fa il marito che arriva sempre venti minuti dopo, Aaron Taylor-Johnson
+        l'amico ricco che non crede a niente, Emma Corrin la donna che paga per prima. E poi c'è Willem
+        Dafoe nella parte del professore che sa: è alla sua terza collaborazione con Eggers ed è il solo
+        personaggio autorizzato a divertirsi. Che sia lo stesso attore che nel 2000 aveva interpretato
+        Max Schreck in <em>L'ombra del vampiro</em> è una battuta interna che Eggers non sottolinea
+        nemmeno, ed è la cosa più elegante del film.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/ArM4yzl1oxCrJVUngw5lKAEpkb7.jpg"
+             alt="Un uomo anziano in cappotto in un interno borghese illuminato a candela" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>Il professor von Franz. Nel 1922 era una comparsa; qui è l'unico che abbia letto i libri giusti.</figcaption>
+      </figure>
+
+      <h2>Cosa non funziona</h2>
+
+      <p>
+        Il secondo atto, quello di Wisborg, è più lungo del necessario di venti minuti buoni. Eggers ha
+        ricostruito una città intera e si vede che gli dispiaceva non farcela stare tutta. E c'è un
+        problema strutturale che riguarda proprio la scelta su Ellen: se il legame nasce da lei,
+        l'arrivo del vampiro perde la qualità di sventura arbitraria che nel film del 1922 era metà
+        dell'orrore. Si guadagna una tragedia e si perde un'epidemia.
+      </p>
+
+      <p>
+        Ha incassato centottantadue milioni di dollari, quattro candidature agli Oscar tecniche
+        — fotografia, costumi, scenografia, trucco — e nessuna vinta, il che è una piccola ingiustizia
+        che segnalo senza scandalizzarmi. Il pubblico gli ha dato un B−, come sempre succede quando un
+        film di genere si permette di durare due ore e dodici e di non correre mai.
+      </p>
+
+      <p>
+        Resta il fatto che nel 2024 qualcuno ha convinto uno studio americano a finanziare un film muto
+        con i dialoghi. Perché è quello che è: le scene migliori — la carrozza senza cocchiere, la nave
+        che entra in porto, l'ultima inquadratura — sono composte per essere capite senza una parola, e
+        potrebbero stare in una copia del 1922 senza che nessuno se ne accorgesse. Il proiezionista del
+        cinema sotto casa mia, che non invecchia dal 1998 e sul quale tengo un fascicolo aperto, alla
+        fine dello spettacolo mi ha detto una cosa sola: «questo lo tengo io». Da lui è una recensione.
+      </p>
+
+      <p class="article__signature">— N. B.</p>
+    </div>
+
+    <!-- ---------- Colonna laterale ---------- -->
+    <aside class="article__aside">
+
+      <div class="filmcard">
+        <h2 class="filmcard__title">La scheda</h2>
+        <dl class="filmcard__list">
+          <dt>Titolo</dt><dd>Nosferatu</dd>
+          <dt>Regia</dt><dd>Robert Eggers</dd>
+          <dt>Anno</dt><dd>2024</dd>
+          <dt>Durata</dt><dd><time datetime="PT132M">132 min</time></dd>
+          <dt>Genere</dt><dd>Horror, Fantastico</dd>
+          <dt>Paese</dt><dd>USA</dd>
+          <dt>Cast</dt><dd>Lily-Rose Depp, Nicholas Hoult, Bill Skarsgård, Aaron Taylor-Johnson, Emma Corrin, Willem Dafoe, Ralph Ineson</dd>
+          <dt>Musiche</dt><dd>Robin Carolan</dd>
+          <dt>Fotografia</dt><dd>Jarin Blaschke — 35mm</dd>
+          <dt>Scenografia</dt><dd>Craig Lathrop</dd>
+          <dt>Montaggio</dt><dd>Louise Ford</dd>
+          <dt>Anteprima</dt><dd>Berlino, 2 dicembre 2024</dd>
+          <dt>In Italia</dt><dd>in sala dal 1º gennaio 2025</dd>
+        </dl>
+      </div>
+
+      <div class="authorcard">
+        <span class="authorcard__avatar" aria-hidden="true">NB</span>
+        <div>
+          <p class="authorcard__name">Nico Baldan</p>
+          <p class="authorcard__bio">
+            Detto «Vermiglio». Entra in sala con un quaderno e ne esce con lo stesso quaderno, però bagnato.
+            <a href="../autori.html">Chi siamo</a>
+          </p>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ---------- Correlate ---------- -->
+  <section class="section" aria-labelledby="related-title">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title" id="related-title">Continua a leggere</h2>
+          <p class="section__sub">Altre recensioni dall'archivio.</p>
+        </div>
+        <a class="btn btn--ghost btn--sm" href="../recensioni.html">
+          Tutte le recensioni
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+
+      <div class="grid">
+
+        <article class="card">
+          <a class="card__media" href="the-lighthouse.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/r4uBaF8VCdIcEp38jUpdxKP8eLJ.jpg" alt=""
+                 width="780" height="439" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-05-06">6 maggio 2026</time> · Elena Vos</p>
+          <h3 class="card__title"><a href="the-lighthouse.html">The Lighthouse: due uomini, uno scoglio e una lampada che non si può guardare</a></h3>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            11 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di Robert Eggers
+          </p>
+        </article>
+
+        <article class="card">
+          <a class="card__media" href="get-out.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/vZ7EVk7FaNEWYqlVWbFLHP8Z0LU.jpg" alt=""
+                 width="780" height="439" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-07-01">1 luglio 2026</time> · Nico Baldan</p>
+          <h3 class="card__title"><a href="get-out.html">Scappa – Get Out: la cosa più spaventosa è la gentilezza</a></h3>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            9 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di Jordan Peele
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <a class="logo" href="../index.html" aria-label="L'Antro — home">
+        <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+        <span class="logo__text"><strong>L'</strong>ANTRO</span>
+      </a>
+      <p class="site-footer__about">
+        Recensioni di cinema scritte, senza fretta.
+        Un posto buio dove si parla di film per esteso.
+      </p>
+    </div>
+    <nav aria-labelledby="f-nav-1">
+      <h2 class="site-footer__title" id="f-nav-1">Esplora</h2>
+      <ul class="site-footer__list">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../recensioni.html">Recensioni</a></li>
+        <li><a href="../archivio.html">Archivio</a></li>
+        <li><a href="../registi.html">Registi</a></li>
+        <li><a href="../autori.html">Chi siamo</a></li>
+        <li><a href="../gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© <span id="year">2026</span> L'Antro. Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Torna in cima" hidden>
+  <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Nosferatu: Eggers rifà Murnau e non chiede scusa a nessuno",
+  "description": "Recensione di Nosferatu (2024) di Robert Eggers.",
+  "inLanguage": "it-IT",
+  "datePublished": "2026-04-29",
+  "dateModified": "2026-04-29",
+  "timeRequired": "PT12M",
+  "image": "https://image.tmdb.org/t/p/w1280/gprjiZWY43vxSKngMha1wfb5TGG.jpg",
+  "author": { "@type": "Person", "name": "Nico Baldan" },
+  "publisher": { "@type": "Organization", "name": "L'Antro" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.lantro.example/movies/nosferatu.html" },
+  "isPartOf": { "@type": "Blog", "@id": "https://www.lantro.example/#blog" },
+  "about": {
+    "@type": "Movie",
+    "name": "Nosferatu",
+    "genre": ["Horror", "Fantasy"],
+    "duration": "PT132M",
+    "dateCreated": "2024",
+    "countryOfOrigin": "US",
+    "director": { "@type": "Person", "name": "Robert Eggers" },
+    "musicBy": { "@type": "Person", "name": "Robin Carolan" },
+    "actor": [
+      { "@type": "Person", "name": "Lily-Rose Depp" },
+      { "@type": "Person", "name": "Bill Skarsgård" },
+      { "@type": "Person", "name": "Willem Dafoe" }
+    ]
+  }
+}
+</script>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+
+<title>It Follows: cammina, non corre, e non si stanca mai — L'Antro</title>
+<meta name="description" content="Recensione di It Follows (2014) di David Robert Mitchell: la cosa che cammina, i sobborghi di Detroit e il synth di Disasterpeace. Rivisto oggi, in attesa di They Follow.">
+<link rel="canonical" href="https://www.lantro.example/movies/it-follows.html">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="L'Antro">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="It Follows: cammina, non corre, e non si stanca mai">
+<meta property="og:description" content="David Robert Mitchell, 2014: la cosa che cammina, i sobborghi di Detroit e il synth di Disasterpeace.">
+<meta property="og:image" content="https://image.tmdb.org/t/p/w1280/zXiF4O7iMVVZVxGe3AM6dScyi7z.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23E50914'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23fff' text-anchor='middle'>A</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-camera" viewBox="0 0 32 24">
+    <rect x="0" y="2" width="21" height="20" rx="3" fill="currentColor"/>
+    <path d="M23 10l9-6v16l-9-6z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-close" viewBox="0 0 24 24">
+    <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 6.5V12l3.5 2.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24">
+    <path d="M4 20l1-4.5L15.5 5A2.1 2.1 0 0 1 18.5 8L8 18.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24">
+    <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24">
+    <path d="M12 20V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24">
+    <path d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header is-solid" id="header">
+  <div class="container site-header__inner">
+
+    <a class="logo" href="../index.html" aria-label="L'Antro — home">
+      <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+      <span class="logo__text"><strong>L'</strong>ANTRO</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigazione principale">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#home">Home</a></li>
+        <li><a class="nav__link is-active" href="../recensioni.html" aria-current="page">Recensioni</a></li>
+        <li><a class="nav__link" href="../archivio.html">Archivio</a></li>
+        <li><a class="nav__link" href="../registi.html">Registi</a></li>
+        <li><a class="nav__link" href="../autori.html">Chi siamo</a></li>
+        <li><a class="nav__link" href="../gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="icon-btn" id="searchToggle" type="button"
+              aria-label="Apri la ricerca" aria-expanded="false" aria-controls="searchPanel">
+        <svg width="22" height="22" aria-hidden="true"><use href="#i-search"></use></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="../recensioni.html">Tutte le recensioni</a>
+      <button class="burger" id="burger" type="button"
+              aria-label="Apri il menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel" id="searchPanel" hidden>
+    <div class="container search-panel__inner">
+      <form class="search-form" role="search" id="searchForm" method="get" action="../index.html">
+        <svg class="search-form__icon" width="20" height="20" aria-hidden="true"><use href="#i-search"></use></svg>
+        <label class="visually-hidden" for="searchInput">Cerca una recensione</label>
+        <input class="search-form__input" id="searchInput" name="q" type="search"
+               placeholder="Cerca un film, un regista, un genere…" autocomplete="off">
+        <button class="icon-btn search-form__close" id="searchClose" type="button" aria-label="Chiudi la ricerca">
+          <svg width="20" height="20" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </form>
+      <p class="search-panel__hint" id="searchStatus" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</header>
+
+<div class="read-progress" id="readProgress" aria-hidden="true"><span></span></div>
+
+<main id="main">
+<article class="article">
+
+  <!-- ---------- Testata ---------- -->
+  <header class="article__head">
+    <div class="container article__head-inner">
+      <nav class="crumbs" aria-label="Percorso">
+        <a href="../index.html">Home</a> <span aria-hidden="true">/</span>
+        <a href="../recensioni.html">Recensioni</a> <span aria-hidden="true">/</span>
+        <span aria-current="page">It Follows</span>
+      </nav>
+
+      <p class="badge badge--static">Horror</p>
+
+      <h1 class="article__title">It Follows: cammina, non corre, e non si stanca mai</h1>
+
+      <p class="article__standfirst">
+        Con <em>They Follow</em> ufficialmente in lavorazione, siamo tornati al 2014 per rivedere il film
+        che ha convinto una generazione a controllare il fondo dell'inquadratura. Regge? Regge fin troppo bene.
+      </p>
+
+      <p class="article__meta">
+        <span class="meta-item">
+          <svg class="ico-red" width="18" height="18" aria-hidden="true"><use href="#i-pen"></use></svg>
+          di <strong>Adam Pryce</strong>
+        </span>
+        <span class="dot" aria-hidden="true"></span>
+        <time datetime="2026-07-29">29 luglio 2026</time>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="meta-item">
+          <svg class="ico-red" width="18" height="18" aria-hidden="true"><use href="#i-clock"></use></svg>
+          8 min di lettura
+        </span>
+      </p>
+    </div>
+  </header>
+
+  <figure class="article__hero article__hero--poster">
+    <div class="poster-stage"
+         style="--stage-bg:url('https://image.tmdb.org/t/p/w1280/zXiF4O7iMVVZVxGe3AM6dScyi7z.jpg')">
+      <img src="https://image.tmdb.org/t/p/w500/86LuLSw5gUfKyGxAA32FKhEiqIv.jpg"
+           alt="Locandina ufficiale italiana di It Follows (2014)"
+           width="500" height="750" fetchpriority="high" decoding="async">
+    </div>
+    <figcaption>Locandina ufficiale — It Follows (David Robert Mitchell, 2014).</figcaption>
+  </figure>
+
+  <!-- ---------- Corpo ---------- -->
+  <div class="container article__layout">
+
+    <div class="article__body">
+
+      <p>
+        La regola è una sola e si spiega in trenta secondi: se ce l'hai addosso, ti segue. Cammina, non
+        corre mai. Può assumere le sembianze di chiunque, di solito qualcuno che conosci, a volte qualcuno
+        nudo in mezzo al prato. La vedi solo tu. Non si ferma, non dorme, non prende scorciatoie, e se ti
+        raggiunge ti uccide. L'unico modo per liberartene è passarla a qualcun altro andandoci a letto,
+        con la clausola scomoda che se quella persona muore la cosa torna indietro lungo la catena e
+        ricomincia da te.
+      </p>
+
+      <p>
+        Detta così sembra il soggetto di uno di quei racconti che ci si passava in colonia. Ed è esattamente
+        il punto: David Robert Mitchell ha costruito il suo secondo film su una struttura da leggenda
+        metropolitana, cioè su una paura che funziona proprio perché non ha una spiegazione. Non c'è
+        un'origine, non c'è un rituale, non c'è un libro antico da tradurre. C'è solo una regola, e
+        cento minuti esatti di conseguenze.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/k6dUyZxqD535QTpbdWiptpRGRPn.jpg"
+             alt="Una strada residenziale deserta" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>Il vero protagonista: lo spazio vuoto in fondo alla strada. Guardatelo, non smette mai di riempirsi.</figcaption>
+      </figure>
+
+      <h2>La grammatica dello sfondo</h2>
+
+      <p>
+        Mitchell fa una cosa semplicissima e la fa per tutto il film: mette la macchina da presa nel posto
+        in cui lo spettatore può vedere più cose di quante ne veda la protagonista. Panoramiche lente a
+        360 gradi in un cortile scolastico, campi larghi tenuti un paio di secondi oltre il necessario,
+        profondità di campo generose. Il risultato è che il pubblico smette di guardare i volti e comincia
+        a scandagliare il fondo dell'inquadratura, cercando la figura che avanza. Non serve nemmeno che
+        ci sia: il film ci ha addestrati a cercarla, e la tensione se la produce da sola.
+      </p>
+
+      <p>
+        È merito anche della fotografia di Mike Gioulakis, che tratta i sobborghi di Detroit come un
+        paesaggio post-qualcosa: prati verdissimi, cieli lattiginosi, case identiche, e a poche miglia di
+        distanza gli isolati abbandonati oltre 8 Mile, di cui il film parla senza mai pronunciare un
+        discorso. La geografia è reale e dice molto: c'è una zona dove i ragazzi possono vivere e una in
+        cui non si va, e la distanza tra le due è il tema, non l'ambientazione.
+      </p>
+
+      <blockquote class="pullquote">
+        <p>Non è un film su una cosa che ti insegue. È un film su un posto da cui, camminando, si può sempre essere raggiunti.</p>
+      </blockquote>
+
+      <p>
+        Poi c'è il tempo, che è la cosa più discussa e più riuscita. <em>It Follows</em> è ambientato in un
+        presente impossibile: televisori a tubo catodico che passano film di fantascienza in bianco e nero,
+        automobili degli anni Settanta, telefoni fissi, e in mezzo un lettore e-reader a forma di conchiglia
+        che non è mai esistito. Non è uno scivolone di continuità, è un dispositivo: il film si stacca da
+        qualsiasi anno per assomigliare al ricordo di un'adolescenza, che è precisamente il modo in cui
+        funzionano le leggende. Chi lo accusa di feticismo anni Ottanta di solito non ha notato che gli
+        anni Ottanta, qui, non ci sono affatto.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/rO7fOpQYuuvbR0XW1sJCS5rkWlJ.jpg"
+             alt="Una piscina comunale di notte" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>Il piano finale in piscina: un'idea da film per ragazzi eseguita con la serietà di un thriller.</figcaption>
+      </figure>
+
+      <h2>Il synth che fa metà del lavoro</h2>
+
+      <p>
+        Bisogna parlare della colonna sonora, perché senza quella il film sarebbe un altro film. Rich
+        Vreeland, in arte Disasterpeace, arrivava dai videogiochi — chi ha giocato a <em>Fez</em> sa di
+        cosa parlo — e porta una scrittura elettronica che non accompagna le scene: le aggredisce. Sono
+        blocchi di synth che entrano a volume pieno, distorti, quasi fastidiosi, e che spesso partono
+        <em>prima</em> che accada qualcosa. È una musica che non commenta la paura, la annuncia, e in
+        alcuni passaggi arriva a coprire i dialoghi. Nel 2014 sembrò un vezzo; oggi è una delle partiture
+        horror più imitate del decennio, tanto che quando è stato annunciato il ritorno di Vreeland per il
+        sequel la notizia ha fatto più rumore del casting.
+      </p>
+
+      <p>
+        Al centro di tutto c'è Maika Monroe, che con Jay costruisce un personaggio credibile proprio
+        perché non fa nulla di eroico. Non indaga, non si arma, non tiene discorsi: cerca solo di dormire
+        in un posto sicuro e di capire a chi può dirlo. Intorno a lei c'è un gruppo di amici scritto con
+        un affetto che nell'horror adolescenziale si vede poco — Paul, Yara, Kelly, Greg non esistono per
+        morire in ordine, esistono per portarle una sedia in giardino e restare svegli a turno. Quella
+        solidarietà stanca è la cosa più adulta del film.
+      </p>
+
+      <p>
+        Sul sottotesto si sono versati fiumi d'inchiostro, e in buona parte a sproposito. Sì, la
+        trasmissione è sessuale, e sì, la lettura come metafora delle malattie a trasmissione sessuale è
+        la prima che viene in mente. Ma il film è più interessante di così: la cosa non punisce il sesso,
+        visto che il sesso è anche l'unica via di fuga disponibile. Quello che <em>It Follows</em> mette in
+        scena è piuttosto il momento in cui l'adolescenza finisce, cioè quando ti accorgi che c'è qualcosa
+        che avanza verso di te a passo d'uomo e che non si può negoziare. Chiamiamola mortalità, e non
+        parliamone più.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/gidQUJJ36N9capzoCrorQx25CMe.jpg"
+             alt="Una spiaggia sul lago all'alba" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>La casa sul lago: l'unica sequenza in cui il film prova a combattere. Va come deve andare.</figcaption>
+      </figure>
+
+      <h2>Cosa non funziona</h2>
+
+      <p>
+        Onestà: l'ultimo atto è il punto debole. Il piano per affrontare la creatura in piscina è
+        volutamente ingenuo, e funziona come idea di scrittura — sono ragazzi, fanno un piano da ragazzi —
+        ma sullo schermo diventa la sequenza più convenzionale di un film che fino a quel momento aveva
+        rifiutato ogni convenzione. Anche il finale, con la sua ambiguità in campo lungo, è più furbo che
+        necessario. Sono dodici minuti sotto tono in un film che per gli altri ottantotto non sbaglia
+        quasi niente.
+      </p>
+
+      <p>
+        Ma è un difetto che si perdona subito, perché <em>It Follows</em> ha fatto la cosa più difficile:
+        ha inventato un mostro nuovo. Non un remake, non un revival, non una variazione su Michael Myers.
+        Una figura che cammina in linea retta e che, dodici anni dopo, continua a farci controllare
+        il fondo dell'inquadratura. Con il sequel alle porte, l'unica vera preoccupazione è che qualcuno
+        provi a spiegarla.
+      </p>
+
+      <p class="article__signature">— A. P.</p>
+    </div>
+
+    <!-- ---------- Colonna laterale ---------- -->
+    <aside class="article__aside">
+
+      <div class="filmcard">
+        <h2 class="filmcard__title">La scheda</h2>
+        <dl class="filmcard__list">
+          <dt>Titolo</dt><dd>It Follows</dd>
+          <dt>Regia</dt><dd>David Robert Mitchell</dd>
+          <dt>Anno</dt><dd>2014</dd>
+          <dt>Durata</dt><dd><time datetime="PT100M">100 min</time></dd>
+          <dt>Genere</dt><dd>Horror</dd>
+          <dt>Paese</dt><dd>Stati Uniti</dd>
+          <dt>Cast</dt><dd>Maika Monroe, Keir Gilchrist, Olivia Luccardi, Jake Weary</dd>
+          <dt>Musiche</dt><dd>Disasterpeace</dd>
+          <dt>Fotografia</dt><dd>Mike Gioulakis</dd>
+          <dt>Anteprima</dt><dd>Cannes, Semaine de la Critique, maggio 2014</dd>
+        </dl>
+      </div>
+
+      <div class="authorcard">
+        <span class="authorcard__avatar" aria-hidden="true">AP</span>
+        <div>
+          <p class="authorcard__name">Adam Pryce</p>
+          <p class="authorcard__bio">
+            Ex istruttore di nuoto. Difende i film lenti e le colonne sonore troppo alte.
+            <a href="../autori.html">Chi siamo</a>
+          </p>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ---------- Correlate ---------- -->
+  <section class="section" aria-labelledby="related-title">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title" id="related-title">Continua a leggere</h2>
+          <p class="section__sub">Altre recensioni dall'archivio.</p>
+        </div>
+        <a class="btn btn--ghost btn--sm" href="../recensioni.html">
+          Tutte le recensioni
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+
+      <div class="grid">
+
+        <article class="card">
+          <a class="card__media" href="the-vvitch.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/34dAw3ai6acNF0mK1zgmNz3wXTI.jpg" alt=""
+                 width="800" height="450" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-08-05">5 agosto 2026</time> · Elena Vos</p>
+          <h3 class="card__title"><a href="the-vvitch.html">The VVitch: dieci anni dopo, il bosco è ancora là</a></h3>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            10 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di Robert Eggers
+          </p>
+        </article>
+
+        <article class="card">
+          <a class="card__media" href="babadook.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/AeZYS1KwWVlAHmTdMbIyw4qUoY.jpg" alt=""
+                 width="800" height="450" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-07-22">22 luglio 2026</time> · Sofia Ricci</p>
+          <h3 class="card__title"><a href="babadook.html">The Babadook: il mostro vive in cantina, il lutto pure</a></h3>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            9 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di Jennifer Kent
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <a class="logo" href="../index.html" aria-label="L'Antro — home">
+        <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+        <span class="logo__text"><strong>L'</strong>ANTRO</span>
+      </a>
+      <p class="site-footer__about">
+        Recensioni di cinema scritte, senza fretta.
+        Un posto buio dove si parla di film per esteso.
+      </p>
+    </div>
+    <nav aria-labelledby="f-nav-1">
+      <h2 class="site-footer__title" id="f-nav-1">Esplora</h2>
+      <ul class="site-footer__list">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../recensioni.html">Recensioni</a></li>
+        <li><a href="../archivio.html">Archivio</a></li>
+        <li><a href="../registi.html">Registi</a></li>
+        <li><a href="../autori.html">Chi siamo</a></li>
+        <li><a href="../gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© <span id="year">2026</span> L'Antro. Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Torna in cima" hidden>
+  <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "It Follows: cammina, non corre, e non si stanca mai",
+  "description": "Recensione di It Follows (2014) di David Robert Mitchell.",
+  "inLanguage": "it-IT",
+  "datePublished": "2026-07-29",
+  "dateModified": "2026-07-29",
+  "timeRequired": "PT8M",
+  "image": "https://image.tmdb.org/t/p/w1280/zXiF4O7iMVVZVxGe3AM6dScyi7z.jpg",
+  "author": { "@type": "Person", "name": "Adam Pryce" },
+  "publisher": { "@type": "Organization", "name": "L'Antro" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.lantro.example/movies/it-follows.html" },
+  "isPartOf": { "@type": "Blog", "@id": "https://www.lantro.example/#blog" },
+  "about": {
+    "@type": "Movie",
+    "name": "It Follows",
+    "genre": "Horror",
+    "duration": "PT100M",
+    "dateCreated": "2014",
+    "countryOfOrigin": "US",
+    "director": { "@type": "Person", "name": "David Robert Mitchell" },
+    "musicBy": { "@type": "Person", "name": "Disasterpeace" },
+    "actor": [
+      { "@type": "Person", "name": "Maika Monroe" },
+      { "@type": "Person", "name": "Keir Gilchrist" }
+    ]
+  }
+}
+</script>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

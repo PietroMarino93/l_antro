@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+
+<title>Oddity: un uomo di legno seduto a tavola, e nessuno che lo mandi via — L'Antro</title>
+<meta name="description" content="Recensione di Oddity (2024) di Damian McCarthy: una veggente cieca, un manichino di legno a grandezza naturale e un horror irlandese girato con quattro attori e un fienile.">
+<link rel="canonical" href="https://www.lantro.example/movies/oddity.html">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="L'Antro">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Oddity: un uomo di legno seduto a tavola, e nessuno che lo mandi via">
+<meta property="og:description" content="Damian McCarthy, 2024: una veggente cieca, un manichino di legno e la contea di Cork.">
+<meta property="og:image" content="https://image.tmdb.org/t/p/w1280/6GhU4BJnqLSaAuz0yQBq3RfdzsF.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23E50914'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23fff' text-anchor='middle'>A</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-camera" viewBox="0 0 32 24">
+    <rect x="0" y="2" width="21" height="20" rx="3" fill="currentColor"/>
+    <path d="M23 10l9-6v16l-9-6z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-close" viewBox="0 0 24 24">
+    <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 6.5V12l3.5 2.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24">
+    <path d="M4 20l1-4.5L15.5 5A2.1 2.1 0 0 1 18.5 8L8 18.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24">
+    <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24">
+    <path d="M12 20V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24">
+    <path d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header is-solid" id="header">
+  <div class="container site-header__inner">
+
+    <a class="logo" href="../index.html" aria-label="L'Antro — home">
+      <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+      <span class="logo__text"><strong>L'</strong>ANTRO</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigazione principale">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#home">Home</a></li>
+        <li><a class="nav__link is-active" href="../recensioni.html" aria-current="page">Recensioni</a></li>
+        <li><a class="nav__link" href="../archivio.html">Archivio</a></li>
+        <li><a class="nav__link" href="../registi.html">Registi</a></li>
+        <li><a class="nav__link" href="../autori.html">Chi siamo</a></li>
+        <li><a class="nav__link" href="../gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="icon-btn" id="searchToggle" type="button"
+              aria-label="Apri la ricerca" aria-expanded="false" aria-controls="searchPanel">
+        <svg width="22" height="22" aria-hidden="true"><use href="#i-search"></use></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="../recensioni.html">Tutte le recensioni</a>
+      <button class="burger" id="burger" type="button"
+              aria-label="Apri il menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel" id="searchPanel" hidden>
+    <div class="container search-panel__inner">
+      <form class="search-form" role="search" id="searchForm" method="get" action="../index.html">
+        <svg class="search-form__icon" width="20" height="20" aria-hidden="true"><use href="#i-search"></use></svg>
+        <label class="visually-hidden" for="searchInput">Cerca una recensione</label>
+        <input class="search-form__input" id="searchInput" name="q" type="search"
+               placeholder="Cerca un film, un regista, un genere…" autocomplete="off">
+        <button class="icon-btn search-form__close" id="searchClose" type="button" aria-label="Chiudi la ricerca">
+          <svg width="20" height="20" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </form>
+      <p class="search-panel__hint" id="searchStatus" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</header>
+
+<div class="read-progress" id="readProgress" aria-hidden="true"><span></span></div>
+
+<main id="main">
+<article class="article">
+
+  <!-- ---------- Testata ---------- -->
+  <header class="article__head">
+    <div class="container article__head-inner">
+      <nav class="crumbs" aria-label="Percorso">
+        <a href="../index.html">Home</a> <span aria-hidden="true">/</span>
+        <a href="../recensioni.html">Recensioni</a> <span aria-hidden="true">/</span>
+        <span aria-current="page">Oddity</span>
+      </nav>
+
+      <p class="badge badge--static">Horror artigianale</p>
+
+      <h1 class="article__title">Oddity: un uomo di legno seduto a tavola, e nessuno che lo mandi via</h1>
+
+      <p class="article__standfirst">
+        Una veggente cieca spedisce a casa del cognato un manichino di legno a grandezza naturale, e
+        quello lo tiene. Con quattro attori, un fienile in contea di Cork e nessuna computer grafica,
+        Damian McCarthy ha fatto l'horror più divertente e più cattivo del 2024.
+      </p>
+
+      <p class="article__meta">
+        <span class="meta-item">
+          <svg class="ico-red" width="18" height="18" aria-hidden="true"><use href="#i-pen"></use></svg>
+          di <strong>Sofia Ricci</strong>
+        </span>
+        <span class="dot" aria-hidden="true"></span>
+        <time datetime="2026-05-27">27 maggio 2026</time>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="meta-item">
+          <svg class="ico-red" width="18" height="18" aria-hidden="true"><use href="#i-clock"></use></svg>
+          9 min di lettura
+        </span>
+      </p>
+    </div>
+  </header>
+
+  <figure class="article__hero article__hero--poster">
+    <div class="poster-stage"
+         style="--stage-bg:url('https://image.tmdb.org/t/p/w1280/6GhU4BJnqLSaAuz0yQBq3RfdzsF.jpg')">
+      <img src="https://image.tmdb.org/t/p/w500/h7Xlgt6kSASv4HvRMjxLBXNFZwF.jpg"
+           alt="Locandina ufficiale di Oddity (2024)"
+           width="500" height="750" fetchpriority="high" decoding="async">
+    </div>
+    <figcaption>Locandina ufficiale — Oddity (Damian McCarthy, 2024).</figcaption>
+  </figure>
+
+  <!-- ---------- Corpo ---------- -->
+  <div class="container article__layout">
+
+    <div class="article__body">
+
+      <p>
+        Comincia con una porta e un uomo che chiede di entrare. Dani sta ristrutturando una casa isolata,
+        è sola, è sera, e dall'altra parte c'è un tale che dice di aver visto qualcuno intrufolarsi
+        dentro. La scena dura sette o otto minuti, è girata quasi tutta in campo e controcampo attraverso
+        uno spioncino, e non contiene niente di soprannaturale. È già il pezzo migliore di metà dei film
+        horror usciti quell'anno.
+      </p>
+
+      <p>
+        Un anno dopo Dani è morta. Il marito Ted (Gwilym Lee), psichiatra in una clinica psichiatrica
+        giudiziaria, ha già una nuova compagna, Yana, e ha già rimesso in ordine la casa. Arriva Darcy,
+        la sorella gemella di Dani: cieca, veggente, proprietaria di un negozio di oggetti maledetti, e
+        interpretata dalla stessa attrice, Carolyn Bracken, che in venti secondi rende impossibile
+        confonderle. Darcy si invita a cena, si porta un regalo, e il regalo è un uomo di legno alto
+        quanto una persona.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/1ez9s9PMGS9Yt3mGwGjtqBU87p7.jpg"
+             alt="Darcy dietro un tavolo scuro, con il proprio riflesso sotto" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>Carolyn Bracken fa due sorelle senza cambiare un tratto: cambia soltanto dove tiene le mani.</figcaption>
+      </figure>
+
+      <h2>La cosa più spaventosa è che non si muove</h2>
+
+      <p>
+        Sono un'appassionata di case che hanno opinioni e di oggetti che le esprimono, e per questo
+        <em>Oddity</em> mi ha fatto un effetto sproporzionato. Il manichino — costruito a mano da Paul
+        McDonnell, senza un fotogramma di digitale — resta seduto a un tavolo per gran parte del film,
+        con la bocca aperta e le mani sulle ginocchia. McCarthy ha raccontato di aver voluto una bambola
+        maledetta a grandezza umana perché quelle piccole, alla lunga, si possono ancora prendere in
+        braccio. Ha ragione, e la differenza è tutta lì: nessuno può spostare quel coso da solo, e nessuno
+        ci prova.
+      </p>
+
+      <p>
+        Il film costruisce la propria tensione su una regola semplicissima e mai enunciata: la macchina da
+        presa non taglia quando dovrebbe. Un personaggio esce dalla stanza, e noi restiamo. Un personaggio
+        si volta, e l'inquadratura tiene per due secondi di troppo. In quei due secondi non succede quasi
+        mai niente, il che rende insostenibile la volta in cui succede. È un modo di girare che costa zero
+        e richiede soltanto che il regista abbia deciso, prima, di cosa vuole fare paura.
+      </p>
+
+      <blockquote class="pullquote">
+        <p>Le case, in questo film, non sono infestate. Sono soltanto arredate male, da qualcuno che sapeva quello che faceva.</p>
+      </blockquote>
+
+      <p>
+        Girato in contea di Cork, in un fienile riadattato che McCarthy aveva già usato per <em>Caveat</em>,
+        con la fotografia di Colm Hogan che tiene tutto sul verde-grigio e sull'ambra delle lampade.
+        Molti oggetti di scena vengono da mercatini dell'usato — dettaglio che, per motivi personali su
+        cui non intendo tornare, ho trovato più inquietante di qualunque cosa ci sia nel film. Le musiche
+        di Richard G. Mitchell fanno il minimo indispensabile e si tolgono di mezzo.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/tzwUife8ExSuHMPC94bqAAcxjEt.jpg"
+             alt="Yana avvicina un grande padiglione di ottone alla testa dell'uomo di legno" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>Un padiglione di ottone appoggiato alla testa di un manichino: la scena in cui il film decide di essere anche molto divertente.</figcaption>
+      </figure>
+
+      <h2>Un giallo travestito da ghost story</h2>
+
+      <p>
+        La cosa che si dice meno di <em>Oddity</em> è che sotto la buccia soprannaturale è un poliziesco
+        costruito con precisione, con indizi piazzati nella prima mezz'ora che tornano tutti. Darcy non è
+        una figura passiva che subisce visioni: è un'investigatrice, e il suo metodo — toccare gli oggetti
+        appartenuti alle persone — è semplicemente un modo diverso di interrogare i testimoni. Il film la
+        tratta come tale, cioè le fa fare mosse, commettere errori e prendere rischi. È il motivo per cui
+        regge la seconda visione, quando il colpevole si sa già.
+      </p>
+
+      <p>
+        McCarthy sbaglia una cosa sola, e la sbaglia a metà: la clinica psichiatrica e il personaggio del
+        paziente sono la parte più convenzionale del film, e servono soprattutto a giustificare un paio di
+        movimenti di trama. Ogni volta che la storia esce di casa perde qualche grado di temperatura. Ma
+        sono venti minuti in totale, e il film si riprende ogni volta appena qualcuno rientra e chiude la
+        porta.
+      </p>
+
+      <figure class="article__figure">
+        <img src="https://image.tmdb.org/t/p/w1280/7uyMqqCLGaZyRVOrc4EpvCR39Fq.jpg"
+             alt="Primo piano di profilo, illuminato dalla fiamma di una candela" width="1200" height="675" loading="lazy" decoding="async">
+        <figcaption>Quasi tutte le scene notturne hanno una sola sorgente di luce dentro il quadro. È una scelta di regia, non di budget.</figcaption>
+      </figure>
+
+      <h2>L'ultima inquadratura</h2>
+
+      <p>
+        Non la descrivo. Dico soltanto che il film si chiude su un oggetto piccolo e domestico, di quelli
+        che stanno sul bancone di un albergo o sulla scrivania di un ufficio, e che dopo averlo visto
+        usato così non lo si guarda più allo stesso modo. Sheila O'Malley ha scritto che è un finale
+        talmente perfetto da superare le aspettative, e per una volta non è una frase di circostanza: è
+        esattamente il tipo di chiusura che un film costruito su oggetti si è guadagnato il diritto di
+        avere.
+      </p>
+
+      <p>
+        <em>Oddity</em> è passato al SXSW nel marzo 2024 portandosi a casa il premio del pubblico della
+        sezione di mezzanotte, è uscito in Irlanda e nel Regno Unito alla fine di agosto e ha incassato in
+        tutto il mondo meno di due milioni di dollari. Da noi è arrivato quasi soltanto in streaming.
+        Sono cifre da film invisibile, e sono la ragione per cui questo pezzo esce adesso e non due anni
+        fa: certi film bisogna andarseli a cercare, e poi bisogna dirlo in giro.
+      </p>
+
+      <p>
+        Poi c'è l'altra ragione, che non riguarda il cinema. Ho passato tutta la visione a pensare a un
+        libro che ho comprato a un mercatino e che non ho mai restituito. <em>Oddity</em> è un film sul
+        fatto che gli oggetti degli altri, quando entrano in casa tua, restano degli altri. Chi tiene
+        chiusa a chiave la cantina — per ordine, non per paura — capirà.
+      </p>
+
+      <p class="article__signature">— S. R.</p>
+    </div>
+
+    <!-- ---------- Colonna laterale ---------- -->
+    <aside class="article__aside">
+
+      <div class="filmcard">
+        <h2 class="filmcard__title">La scheda</h2>
+        <dl class="filmcard__list">
+          <dt>Titolo</dt><dd>Oddity</dd>
+          <dt>Regia</dt><dd>Damian McCarthy</dd>
+          <dt>Anno</dt><dd>2024</dd>
+          <dt>Durata</dt><dd><time datetime="PT98M">98 min</time></dd>
+          <dt>Genere</dt><dd>Horror, Mystery</dd>
+          <dt>Paese</dt><dd>Irlanda</dd>
+          <dt>Cast</dt><dd>Carolyn Bracken, Gwilym Lee, Caroline Menton, Tadhg Murphy, Steve Wall</dd>
+          <dt>Musiche</dt><dd>Richard G. Mitchell</dd>
+          <dt>Fotografia</dt><dd>Colm Hogan</dd>
+          <dt>Montaggio</dt><dd>Brian Philip Davis</dd>
+          <dt>Anteprima</dt><dd>SXSW, marzo 2024 (premio del pubblico, Midnighters)</dd>
+        </dl>
+      </div>
+
+      <div class="authorcard">
+        <span class="authorcard__avatar" aria-hidden="true">SR</span>
+        <div>
+          <p class="authorcard__name">Sofia Ricci</p>
+          <p class="authorcard__bio">
+            Scrive di horror domestico. È convinta che le case abbiano opinioni, e finora nessuno l'ha smentita.
+            <a href="../autori.html">Chi siamo</a>
+          </p>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ---------- Correlate ---------- -->
+  <section class="section" aria-labelledby="related-title">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title" id="related-title">Continua a leggere</h2>
+          <p class="section__sub">Altre recensioni dall'archivio.</p>
+        </div>
+        <a class="btn btn--ghost btn--sm" href="../recensioni.html">
+          Tutte le recensioni
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+
+      <div class="grid">
+
+        <article class="card">
+          <a class="card__media" href="hokum.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/zQcj9CaPFrxhJE30AIn8XqDM4yK.jpg" alt=""
+                 width="780" height="439" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-08-07">7 agosto 2026</time> · Nico Baldan</p>
+          <h3 class="card__title"><a href="hokum.html">Hokum: l'albergo è aperto, la suite nuziale un po' meno</a></h3>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            9 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di Damian McCarthy
+          </p>
+        </article>
+
+        <article class="card">
+          <a class="card__media" href="the-vvitch.html" tabindex="-1" aria-hidden="true">
+            <img src="https://image.tmdb.org/t/p/w780/34dAw3ai6acNF0mK1zgmNz3wXTI.jpg" alt=""
+                 width="800" height="450" loading="lazy" decoding="async">
+          </a>
+          <p class="card__kicker"><time datetime="2026-08-05">5 agosto 2026</time> · Elena Vos</p>
+          <h3 class="card__title"><a href="the-vvitch.html">The VVitch: dieci anni dopo, il bosco è ancora là</a></h3>
+          <p class="card__meta">
+            <svg class="ico-red" width="16" height="16" aria-hidden="true"><use href="#i-clock"></use></svg>
+            10 min di lettura
+            <span class="dot" aria-hidden="true"></span>
+            regia di Robert Eggers
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <a class="logo" href="../index.html" aria-label="L'Antro — home">
+        <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+        <span class="logo__text"><strong>L'</strong>ANTRO</span>
+      </a>
+      <p class="site-footer__about">
+        Recensioni di cinema scritte, senza fretta.
+        Un posto buio dove si parla di film per esteso.
+      </p>
+    </div>
+    <nav aria-labelledby="f-nav-1">
+      <h2 class="site-footer__title" id="f-nav-1">Esplora</h2>
+      <ul class="site-footer__list">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../recensioni.html">Recensioni</a></li>
+        <li><a href="../archivio.html">Archivio</a></li>
+        <li><a href="../registi.html">Registi</a></li>
+        <li><a href="../autori.html">Chi siamo</a></li>
+        <li><a href="../gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© <span id="year">2026</span> L'Antro. Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Torna in cima" hidden>
+  <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Oddity: un uomo di legno seduto a tavola, e nessuno che lo mandi via",
+  "description": "Recensione di Oddity (2024) di Damian McCarthy.",
+  "inLanguage": "it-IT",
+  "datePublished": "2026-05-27",
+  "dateModified": "2026-05-27",
+  "timeRequired": "PT9M",
+  "image": "https://image.tmdb.org/t/p/w1280/6GhU4BJnqLSaAuz0yQBq3RfdzsF.jpg",
+  "author": { "@type": "Person", "name": "Sofia Ricci" },
+  "publisher": { "@type": "Organization", "name": "L'Antro" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.lantro.example/movies/oddity.html" },
+  "isPartOf": { "@type": "Blog", "@id": "https://www.lantro.example/#blog" },
+  "about": {
+    "@type": "Movie",
+    "name": "Oddity",
+    "genre": ["Horror", "Mystery"],
+    "duration": "PT98M",
+    "dateCreated": "2024",
+    "countryOfOrigin": "IE",
+    "director": { "@type": "Person", "name": "Damian McCarthy" },
+    "musicBy": { "@type": "Person", "name": "Richard G. Mitchell" },
+    "actor": [
+      { "@type": "Person", "name": "Carolyn Bracken" },
+      { "@type": "Person", "name": "Gwilym Lee" },
+      { "@type": "Person", "name": "Caroline Menton" }
+    ]
+  }
+}
+</script>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

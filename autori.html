@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+
+<title>Chi siamo — L'Antro</title>
+<meta name="description" content="I cinque autori de L'Antro.">
+<link rel="canonical" href="https://www.lantro.example/autori.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="L'Antro">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Chi siamo — L'Antro">
+<meta property="og:description" content="I cinque autori de L'Antro.">
+<meta property="og:image" content="https://image.tmdb.org/t/p/w1280/qY7zVZ7liULhfRoXg4c9Xl83LcR.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23E50914'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23fff' text-anchor='middle'>A</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Salta al contenuto</a>
+
+<svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-camera" viewBox="0 0 32 24">
+    <rect x="0" y="2" width="21" height="20" rx="3" fill="currentColor"/>
+    <path d="M23 10l9-6v16l-9-6z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-close" viewBox="0 0 24 24">
+    <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 6.5V12l3.5 2.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24">
+    <path d="M4 20l1-4.5L15.5 5A2.1 2.1 0 0 1 18.5 8L8 18.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24">
+    <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24">
+    <path d="M12 20V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24">
+    <path d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header is-solid" id="header">
+  <div class="container site-header__inner">
+
+    <a class="logo" href="index.html" aria-label="L'Antro — home">
+      <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+      <span class="logo__text"><strong>L'</strong>ANTRO</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigazione principale">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#home">Home</a></li>
+        <li><a class="nav__link" href="recensioni.html">Recensioni</a></li>
+        <li><a class="nav__link" href="archivio.html">Archivio</a></li>
+        <li><a class="nav__link" href="registi.html">Registi</a></li>
+        <li><a class="nav__link is-active" href="autori.html" aria-current="page">Chi siamo</a></li>
+        <li><a class="nav__link" href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="icon-btn" id="searchToggle" type="button"
+              aria-label="Apri la ricerca" aria-expanded="false" aria-controls="searchPanel">
+        <svg width="22" height="22" aria-hidden="true"><use href="#i-search"></use></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="movies/hokum.html">Ultima recensione</a>
+      <button class="burger" id="burger" type="button"
+              aria-label="Apri il menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Pannello di ricerca -->
+  <div class="search-panel" id="searchPanel" hidden>
+    <div class="container search-panel__inner">
+      <form class="search-form" role="search" id="searchForm" action="#chi-siamo">
+        <svg class="search-form__icon" width="20" height="20" aria-hidden="true"><use href="#i-search"></use></svg>
+        <label class="visually-hidden" for="searchInput">Cerca una recensione</label>
+        <input class="search-form__input" id="searchInput" name="q" type="search"
+               placeholder="Cerca un film, un regista, un genere…" autocomplete="off">
+        <button class="icon-btn search-form__close" id="searchClose" type="button" aria-label="Chiudi la ricerca">
+          <svg width="20" height="20" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </form>
+      <p class="search-panel__hint" id="searchStatus" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section" id="chi-siamo" aria-labelledby="chi-siamo-title">
+    <div class="container">
+
+      <div class="section__head">
+        <div>
+          <nav class="crumbs" aria-label="Percorso">
+            <a href="index.html">Home</a> <span aria-hidden="true">/</span>
+            <span aria-current="page">Chi siamo</span>
+          </nav>
+          <h1 class="section__title" id="chi-siamo-title">Chi siamo</h1>
+          <p class="section__sub">Cinque persone che non dormono bene e ne scrivono.</p>
+        </div>
+        <a class="btn btn--ghost btn--sm" href="recensioni.html">
+          Vai alle recensioni
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+
+      <p class="crew-intro">
+        L'Antro non ha una redazione: ha un gruppo di spettatori accaniti che si scambiano film,
+        si accusano a vicenda di non aver capito il finale e ogni tanto pubblicano qualcosa.
+        Nessuno di noi è un critico professionista. Alcuni di noi non sono più nemmeno del tutto sereni.
+      </p>
+
+      <div class="grid grid--crew" id="crewGrid">
+
+        <article class="crew" data-tags="nico baldan vermiglio recensore redazione pellicola anni settanta giallo italiano proiezionista murnau nosferatu">
+          <span class="crew__avatar" aria-hidden="true">NB</span>
+          <div>
+            <p class="crew__kicker">Pellicola · Anni Settanta</p>
+            <h3 class="crew__name">Nico Baldan</h3>
+            <p class="crew__handle">detto «Vermiglio», per via del maglione</p>
+            <p class="crew__bio">
+              Guarda soltanto film proiettati in pellicola e considera lo streaming «una seduta spiritica
+              mal riuscita». Entra in sala con un quaderno e ne esce con lo stesso quaderno, però bagnato,
+              e non ha mai voluto spiegare perché. Giura che il proiezionista del cinema sotto casa non
+              invecchia dal 1998 e ha aperto un fascicolo sulla questione. Il fascicolo è alla pagina 340.
+            </p>
+          </div>
+          <p class="crew__tag"><strong>Ultima recensione:</strong> <a href="movies/hokum.html">Hokum</a></p>
+        </article>
+
+        <article class="crew" data-tags="elena vos recensore redazione folk horror the vvitch the lighthouse caprone bosco fondatrice">
+          <span class="crew__avatar" aria-hidden="true">EV</span>
+          <div>
+            <p class="crew__kicker">Fondatrice · Folk horror</p>
+            <h3 class="crew__name">Elena Vos</h3>
+            <p class="crew__handle">«se non succede niente per un'ora, è il mio film»</p>
+            <p class="crew__bio">
+              Ha aperto L'Antro nel salotto di casa, dopo la quattordicesima visione di <em>The VVitch</em>.
+              Sostiene di aver imparato l'inglese del Seicento «per necessità professionale» e tiene sulla
+              scrivania un caprone di ceramica a cui sottopone ogni pezzo prima della pubblicazione: se il
+              caprone non risponde, l'articolo esce. Finora il caprone non ha mai risposto.
+              Dorme con la luce accesa dal 2016 e dà la colpa al lavoro.
+            </p>
+          </div>
+          <p class="crew__tag"><strong>Ultima recensione:</strong> <a href="movies/the-vvitch.html">The VVitch</a></p>
+        </article>
+
+        <article class="crew" data-tags="adam pryce recensore redazione it follows horror piscina slasher inseguimenti weapons">
+          <span class="crew__avatar" aria-hidden="true">AP</span>
+          <div>
+            <p class="crew__kicker">Horror lento · Inseguimenti</p>
+            <h3 class="crew__name">Adam Pryce</h3>
+            <p class="crew__handle">«controllate sempre il fondo dell'inquadratura»</p>
+            <p class="crew__bio">
+              Ex istruttore di nuoto in una piscina comunale. Ha dato le dimissioni tre giorni dopo aver
+              visto <em>It Follows</em> e non ha mai chiarito del tutto la vicenda. Cammina rasente ai muri
+              «per rigore metodologico» e si è imposto una regola ferrea: nessuna recensione dopo
+              mezzanotte, perché a mezzanotte le recensioni cominciano a rispondergli. Cammina sempre.
+              Non corre mai. Dice che tanto non serve.
+            </p>
+          </div>
+          <p class="crew__tag"><strong>Ultima recensione:</strong> <a href="movies/it-follows.html">It Follows</a></p>
+        </article>
+
+        <article class="crew" data-tags="sofia ricci recensore redazione the babadook oddity obsession horror domestico lutto cantina libro oggetti">
+          <span class="crew__avatar" aria-hidden="true">SR</span>
+          <div>
+            <p class="crew__kicker">Horror domestico · Lutto</p>
+            <h3 class="crew__name">Sofia Ricci</h3>
+            <p class="crew__handle">«il mostro peggiore è quello che chiede cosa c'è per cena»</p>
+            <p class="crew__bio">
+              Ha comprato un libro pop-up a un mercatino dell'usato senza guardare la copertina e da
+              allora tiene la cantina chiusa a chiave, «per ordine, non per paura». Scrive di horror
+              domestico perché è convinta che le case abbiano opinioni. Nel 2023 ha discusso animatamente
+              con un armadio della camera degli ospiti e ammette, con sportività, di aver perso.
+              Non ha ancora restituito il libro.
+            </p>
+          </div>
+          <p class="crew__tag"><strong>Ultima recensione:</strong> <a href="movies/babadook.html">The Babadook</a></p>
+        </article>
+
+        <article class="crew" data-tags="marta cinti recensore redazione biblioteca turno di notte corridoi jump scare archivio backrooms">
+          <span class="crew__avatar" aria-hidden="true">MC</span>
+          <div>
+            <p class="crew__kicker">Turno di notte · Archivio</p>
+            <h3 class="crew__name">Marta Cinti</h3>
+            <p class="crew__handle">«i jump scare li ho già visti gratis, al lavoro»</p>
+            <p class="crew__bio">
+              Fa il turno di notte in una biblioteca comunale e scrive tra le due e le quattro, quando
+              l'edificio «si assesta». Ha catalogato trecento film secondo un unico criterio di sua
+              invenzione: il numero di corridoi percorsi al buio. Detesta i jump scare per motivi
+              professionali. Alle 3:14 esatte smette di scrivere, controlla la sala consultazione
+              e torna. Torna quasi sempre.
+            </p>
+          </div>
+          <p class="crew__tag"><strong>Ultima recensione:</strong> <a href="movies/hereditary.html">Hereditary</a></p>
+        </article>
+
+      </div>
+
+      <p class="no-results" id="noCrew" hidden>Nessun recensore corrisponde alla tua ricerca.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+
+    <div>
+      <a class="logo" href="index.html" aria-label="L'Antro — home">
+        <svg class="logo__icon" width="32" height="24" aria-hidden="true"><use href="#i-camera"></use></svg>
+        <span class="logo__text"><strong>L'</strong>ANTRO</span>
+      </a>
+      <p class="site-footer__about">
+        Recensioni di cinema scritte, senza fretta.
+        Un posto buio dove si parla di film per esteso.
+      </p>
+    </div>
+
+    <nav aria-labelledby="f-nav-1">
+      <h2 class="site-footer__title" id="f-nav-1">Esplora</h2>
+      <ul class="site-footer__list">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="recensioni.html">Recensioni</a></li>
+        <li><a href="archivio.html">Archivio</a></li>
+        <li><a href="registi.html">Registi</a></li>
+        <li><a href="autori.html">Chi siamo</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© <span id="year">2026</span> L'Antro. Tutti i diritti riservati.</p>
+  </div>
+  <div class="container">
+    <aside class="ai-notice" aria-label="Avviso sull'origine dei contenuti">
+      <strong>Attenzione:</strong> questo sito è interamente generato con l'AI a soli scopi accademici e senza fini di lucro.
+    </aside>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Torna in cima" hidden>
+  <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
