@@ -669,14 +669,6 @@ ul{ margin:0; padding:0; list-style:none; }
 }
 .site-footer__bottom p{ margin:0; }
 .site-footer__bottom a:hover{ color:var(--red); }
-.ai-notice{
-  margin-top:22px; padding:16px 18px;
-  border:1px solid rgba(229,9,20,.55); border-left:4px solid var(--red);
-  background:rgba(229,9,20,.08); color:var(--text);
-  font-size:.88rem; line-height:1.55; text-transform:uppercase;
-}
-.ai-notice strong{ color:#fff; }
-
 .to-top{
   position:fixed; right:22px; bottom:22px; z-index:90;
   display:grid; place-items:center;
